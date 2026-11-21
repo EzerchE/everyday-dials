@@ -1,0 +1,196 @@
+STREAM DECK VIDEO CONTROLS — GELİŞTİRİCİYE TESLİM / V6
+21 Kasım 2026
+
+NEDEN MEVCUT EKRAN İSTENEN SONUCU VERMEDİ?
+Ekteki ekran görüntüsünde görülebilenler:
+- Tuş ikonları tuş alanına göre küçük; kadran ikonları daha baskın.
+- Kadran şeridinde açıklamalar çok küçük ve birden fazla satıra sıkıştırılmış.
+- Birçok kadran aynı "Turn" kelimesini gösteriyor; işlem ayrımı zayıf.
+- Grafik içindeki etiketler küçüldükçe okunabilirliğini kaybediyor.
+- Önceki paket zaten bu riskleri taşıyordu: metin, ilerleme çizgisi ve
+  "Reset 1x" gibi, yalnızca kısayol göndererek garanti edilemeyen bir vaat.
+- Ekran görüntüsünden kodu, basma efektlerinin çalışıp çalışmadığını veya
+  yüzde değerinin gerçekten okunup okunmadığını belirlemek mümkün değil.
+
+SORUMLULUK
+Önceki görsel paketi, kendi başına tamamlanmış bir arayüz şartnamesi değildi.
+Özellikle normal/basılı durumların geçici geri bildirime nasıl bağlanacağı
+net değildi. Önceki "State 1 / State 2" önerisi, basılı kalma efekti yerine
+kalıcı aç/kapa durumu yaratabilir. Bunu yeni pakette açıkça düzeltiyoruz.
+
+GELİŞTİRİCİYE GÖNDERİLECEK MESAJ
+"Lütfen önceki ekranı sadece mevcut PNG'leri küçülterek revize etmeyelim.
+Bu V6 paketindeki referans yerleşimi esas alalım. Aynı çizgi kalınlığını,
+ikon boyutunu, İngilizce etiketleri ve sade kadran ekranlarını koruyalım.
+Görselde hazır etiket varsa Stream Deck başlığı eklemeyelim. 'Turn', çok
+satırlı kullanım açıklamaları ve doğrulanmamış yüzde/ilerleme bilgilerini
+kadran şeridine koymayalım. Basılı ve döndürme görsellerini gerçek olaylara
+bağlayıp otomatik olarak normal duruma döndürelim. Önce bir tuş ve bir
+kadranı gerçek cihazda test edip onay için ekran görüntüsü/video gönderelim;
+sonra kalanlara uygulayalım. Uygulamanın kendi gri çerçevelerini ikon dosyası
+ile yok etmeye çalışmayalım."
+
+PAKETİN İÇERİĞİ
+keys/labeled/288 ve /144:
+  28 tuş; her biri normal ve -pressed. İngilizce etiket PNG içinde.
+keys/icon-only/288 ve /144:
+  Aynı tuşların yazısız sürümleri. Native başlık isteyen uygulama için.
+vectors/:
+  Arka plansız SVG çizimleri; yeniden ölçeklemek veya kadran simgesi için.
+  Fontla çizilen 5/10 rakamları haricinde çizgiler geometrik SVG öğeleridir.
+dials/200x100 ve /400x200:
+  Volume, Seek, Speed, Frame. Normal, left, right, pressed görselleri.
+reference/:
+  Hedef yerleşim, tüm durumlar ve gerçek 800x100 piksel şerit örneği.
+layout/encoder-canvas.json:
+  200x100 tam-görsel geri bildirim için SDK layout başlangıç örneği.
+  Plugine entegre edilmeli; tek başına çalışan plugin değildir.
+design-tokens.json:
+  Ortak renk rolleri, normal/aktif/basılı arka plan tonları.
+SHORTCUTS_EN.txt:
+  Dosya adlarıyla kısayol eşleştirmeleri ve platform sınırlamaları.
+source/generate.py:
+  PNG/SVG'leri tekrar üreten kaynak; Python, Pillow, CairoSVG ve sistem
+  Cairo kütüphanesi gerekir. FONT yolunu DejaVu Sans dosyasına ayarlayın.
+QA_REPORT.txt ve MANIFEST.sha256:
+  Görsel inceleme kapsamı, otomatik dosya kontrolü ve SHA-256 değerleri.
+
+UYGULAMA KURALLARI
+1. Tuş görselini kareye, kadran görselini 2:1 alana yerleştirin; esnetmeyin.
+   288 PNG'ler ana kaynaktır; 144 alternatifleri de hazırdır. Hedef cihazın
+   kabul ettiği boyutu seçin. Donanım/Stream Deck köşelerini kendisi kırpar.
+   Press çerçevesi 288 tuşta 14 px içeridedir; ikinci bir çerçeve eklemeyin.
+2. Labeled sürüm kullanılıyorsa native başlığı kapatın (manifest durumunda
+   ShowTitle=false ya da eşdeğer). Icon-only sürümde yalnızca tek başlık
+   katmanı kullanın. İkisini aynı anda kullanmayın.
+3. Tuşlarda çizim 24x24 SVG ve 1.7 stroke gridine dayanır. Normal ve basılı
+   sürümlerde hizalama değişmez. Genel komutlarda sürekli nokta yoktur. Durum görsellerindeki dolu/boş
+   nokta kalıcı durumu belirtir. Hafif arka plan geçişi ve basılı durumda
+   güvenli parıltı artık PNG içinde vardır; ikinci bir efekt eklemeyin.
+4. Stream Deck + layout alanı HER KADRAN için 200x100 px'dir. Dört kadranın
+   toplam görünümü 800x100 olabilir ama plugin tek ortak 800x100 layout
+   kullanmamalı; her encoder kendi alanına görsel gönderir.
+5. Tam görsel layout örneğinde yalnızca "canvas" pixmap öğesi vardır.
+   Başlığı ve değeri PNG içinde olduğu için üstüne tekrar text eklemeyin.
+   Örnek değerin yolu plugin dizininde doğrulanmalı; setFeedback ile
+   {canvas: 'gerçek/görsel/yolu.png'} gönderilecek şekilde entegre edin.
+6. Gerçek cihazdaki native fiziksel kadranlar ve Stream Deck uygulamasının
+   çerçeve/arayüz kaplaması bizim görsellerimizin parçası değildir. Hedef
+   referansta da kadran alanı şematiktir; ürün fotoğrafı değildir.
+
+BASMA / ÇEVİRME GERİ BİLDİRİMİ
+- keyDown: ilgili -pressed PNG'yi göster, eylemi bir kez gönder.
+- keyUp: en güncel doğrulanmış durum görseline dön; durum bilinmiyorsa
+  genel normal PNG kullan. SDK eventleri uygulamada doğrulanmalı.
+- İki durumlu Switch/Multi Action Switch, tek başına anlık press değildir;
+  her basmada kalıcı normal/pressed geçişi yaptırmayın.
+- Gerçek toggle durumunu (Mute, Captions vb.) ancak oynatıcı durumunu
+  okuyabiliyorsanız gösterin; keyDown/Up ile karıştırmayın.
+- dialRotate: tick işaretine göre left veya right göster. Tick sayısını
+  eylem tekrarına uygula; son tick'ten yaklaşık 140 ms sonra normale dön.
+  Yeni tick gelince eski reset zamanlayıcısını iptal et; slot başına tut.
+- dialDown/dialUp: desteklenen push eylemlerinde pressed/normal göster.
+- Speed push varsayılan olarak eylemsizdir. Native kesin 1x reset kısayolu
+  yoktur; "Reset 1x" yazmayın. Speed pressed görseli bu yüzden "—" gösterir.
+  Reset istenirse ayrı, gerçek oynatıcı entegrasyonu gerekir.
+- Bu PNG'ler tek başına animasyon veya kısayol göndermez; bağlantı kodu
+  geliştiricinin plugininde yapılmalı. Sadece statik Hotkey kullanılıyorsa
+  normal görseli kullanın; press desteği varmış gibi sunmayın.
+
+DOĞRU VERİ / SAHTE GÖSTERGE AYRIMI
+- Kısayol göndermek, YouTube'un mevcut ses yüzdesini veya hızını okumaz.
+- %29 veya 1.0x gibi değerleri ancak gerçekten okuyup doğruladıysanız yazın.
+- Yerel tahmini sayacı gerçek oynatıcı değeri diye göstermeyin.
+- V6 bu nedenle yüzde ve dekoratif ilerleme çizgisi içermez.
+- Dinamik gösterim eklenirse PNG üzerine metin yığmayın; ayrı text layout
+  tasarlayıp eski metinleri kaldırın. Bilgi yoksa yön/işlem etiketi kullanın.
+
+KABUL KONTROLÜ — GELİŞTİRİCİ GERÇEK CİHAZDA YAPMALI
+[ ] Native 200x100 ekranda yazılar okunuyor; taşma/üst üste başlık yok.
+[ ] KeyDown, KeyUp: efekt yalnızca basma sırasında ve tek komut gönderiyor.
+[ ] Hızlı art arda çevirme: yön doğru, son olaydan sonra normale dönüyor.
+[ ] Her kadranın geri bildirimi yalnızca kendi slotunu güncelliyor.
+[ ] Video/chapter ayrımı doğru; chapter içeren video ile test edildi.
+[ ] Windows Ctrl / macOS Option chapter eşleştirmesi test edildi.
+[ ] Focus video oynatıcıda; arama kutusunda yanlış kısayol tetiklenmiyor.
+[ ] Kare ilerletme yalnızca video duraklatılmışken kullanılıyor.
+[ ] Speed push yanlışlıkla sıfırlama vaadi veya komut zinciri üretmiyor.
+[ ] Mute/captions ve live değerler gerçek durumdan okunmadıysa iddia yok.
+
+DOĞRULANAN KAYNAKLAR
+https://docs.elgato.com/streamdeck/sdk/v2/references/touch-strip-layout/
+https://docs.elgato.com/streamdeck/sdk/v2/guides/dials/
+https://support.google.com/youtube/answer/7631406?hl=en
+
+SINIRLAR
+Bu teslim görsel ve uygulama şartnamesidir. Mevcut geliştirici koduna veya
+fiziksel Stream Deck cihazına erişilmedi; plugin kurulumu ve canlı davranış
+bu teslimde test edilmedi. Yeni marketplace paketi değildir; uygulama
+onaylandıktan sonra mağaza görselleri nihai ürünle eşleştirilmelidir.
+
+V6 — ARKA PLAN EFEKTLERİ VE KALICI DURUMLAR
+=========================================
+Önceki sürümde derinlik fazla azaltılmıştı. Bu sürüm bütün genel tuşlara ve
+kadranlara üstten alta hafif koyu yüzey geçişini geri getirir. Basılı durumda
+kırmızı ton ve yuvarlak çerçeveye bağlı ölçülü parıltı vardır. Genel basma
+efekti ile kalıcı oynatıcı durumunu birbirinin yerine kullanmayın.
+
+HANGİLERİNDE FAYDALI?
+- Captions On/Off, Muted/Sound On, Playing/Paused: özellikle faydalı.
+- Full Screen, Theater, Mini Player On/Off: isteğe bağlı ama faydalı.
+- Next, Previous, sarma, ses +/− gibi tek seferlik komutlarda aktif/pasif
+  üretmek gereksiz; mevcut normal/pressed çiftleri yeterlidir.
+- "Off" çalışmaz/devre dışı demek değildir. Altyazı kapalı olsa da tuş
+  çalışır. Captions unavailable/disabled gibi izin veya içerik kaynaklı
+  durumlar bu pakette ayrı üretilmedi; bunları Off ile karıştırmayın.
+
+EK DOSYALAR
+states/labeled/288 ve /144; states/icon-only/288 ve /144:
+  6 işlev x 2 kalıcı durum x 2 basma durumu x 2 etiket x 2 boyut = 96 PNG.
+state-map.json:
+  Dosya kökü -> ikon, komut etiketi, doğrulanmış mevcut durum, renk, hotkey.
+dials/states/200x100 ve /400x200:
+  Volume Muted/Sound On ve Seek Playing/Paused, her biri pressed ile 16 PNG.
+reference/05-* ve 06-*:
+  Ek durumların tamamını gösterir. Genel referans nötr görünümü korur.
+
+DOSYA SEMANTİĞİ
+playback-playing.png: Video oynuyor. Pause ikonu/komutu gösterilir.
+playback-paused.png: Video duraklatılmış. Play ikonu/komutu gösterilir.
+captions-on.png / captions-off.png: Altyazının mevcut durumu; C ile değişir.
+mute-on.png: Mute özelliği açık, ses kapalı. Komut etiketi Unmute.
+mute-off.png: Mute özelliği kapalı, ses açık. Komut etiketi Mute.
+fullscreen/theater/mini-player-on/off.png: İlgili modun mevcut durumu.
+-pressed eki: O mevcut durumdayken fiziksel basmanın geçici görünümü.
+Playback ikonları bir sonraki eylemi gösterir. Mute ikonları mevcut ses
+halini gösterir; komut etiketi bir sonraki eylemdir. Status satırı her zaman
+mevcut durumu gösterir. Yazısız sürümde de bu ikon semantiği korunur.
+
+RENK VE KARIŞTIRMAMA KURALI
+- Genel normal: koyu gri arka plan, beyaz ikon.
+- Aktif kalıcı durum: hafif kırmızı ton, dolu küçük durum noktası.
+- Kapalı/duraklatılmış durum: gri ton, boş nokta; ikon hâlâ net beyaz.
+- Basılı: ince kırmızı çerçeve + güvenli parıltı; noktanın dolu/boş anlamı
+  değişmez. Böylece press ile on/off birbirinden ayrılır.
+
+GELİŞTİRİCİYE KISA MESAJ
+"V6'yı kullanalım: arka plan derinliği PNG'lerin içinde. Captions, Playback,
+Mute ve görüntüleme modlarını gerçek YouTube durumuyla eşleştirelim.
+keyUp'ta her zaman genel normal görsele değil, son doğrulanmış kalıcı
+on/off veya playing/paused görseline dönelim. PNG üzerine fazladan glow,
+başlık veya durum yazısı eklemeyelim. Sadece klavye kısayolu göndermek
+oynatıcının mevcut durumunu bilmek değildir. Durum okunamıyorsa yanlış
+On/Off göstermek yerine genel Play/Pause, Captions veya Mute görselini
+kullanalım. Tarayıcıda elle yapılan değişiklikleri de eşzamanlı takip edelim."
+
+DURUM SENKRONİZASYONU
+1. Her eylem için doğrulanmış currentState ve held ayrı tutulmalı.
+2. Render: held ise currentState-pressed, değilse currentState.
+3. Basılıyken oynatıcı değişirse currentState güncellenir; keyUp en yeni
+   duruma döner. Eski cached normal görsele geri dönmeyin.
+4. İlk bağlantı, yeni video, sayfa yenileme ve manuel mouse/klavye değişimi
+   durumları yeniden okumalı. Kontrolü kaybedince genel nötr ikonu kullanın.
+5. Yerel Switch ile on/off seçmek mümkündür ama dışarıdan değişikliklerde
+   senkron bozulur; bunu gerçek durum göstergesi diye sunmayın.
+6. Bu teslim görüntü paketidir; canlı durum okuyan plugin/tarayıcı bağlantısı
+   dahil değildir ve fiziksel cihaz üzerinde test edilmedi.

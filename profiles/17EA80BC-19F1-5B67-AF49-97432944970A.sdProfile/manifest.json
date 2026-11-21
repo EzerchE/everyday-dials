@@ -1,0 +1,15 @@
+{
+  "Device": {
+    "Model": "20GBD9901",
+    "UUID": "00000000-0000-0000-0000-000000000000"
+  },
+  "Name": "Everyday Dials - Spotify Media",
+  "Pages": {
+    "Current": "e28b0d08-e69a-563c-a87d-0d818bfc1a0a",
+    "Default": "051f31c6-0e7a-5a8b-b357-0cca62f4731a",
+    "Pages": [
+      "e28b0d08-e69a-563c-a87d-0d818bfc1a0a"
+    ]
+  },
+  "Version": "3.0"
+}

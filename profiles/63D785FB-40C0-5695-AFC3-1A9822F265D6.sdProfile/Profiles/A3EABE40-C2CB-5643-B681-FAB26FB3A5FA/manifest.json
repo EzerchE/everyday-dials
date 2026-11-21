@@ -1,0 +1,284 @@
+{
+  "Controllers": [
+    {
+      "Actions": {
+        "0,0": {
+          "ActionID": "4dbf71b0-f8b3-5e4b-aa23-acebaad55e6e",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "chrome-daily-key-0"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "1,0": {
+          "ActionID": "49966c52-5c64-597c-a554-d895a52b3b08",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "chrome-daily-key-1"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "2,0": {
+          "ActionID": "dbf88826-3014-5355-ac64-35fd8cf67a45",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "chrome-daily-key-2"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "3,0": {
+          "ActionID": "23a43304-a822-53a8-80b4-cb15f1285e18",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "chrome-daily-key-3"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "0,1": {
+          "ActionID": "325833d9-fb47-546f-a55b-00612b78ce7c",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "chrome-daily-key-4"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "1,1": {
+          "ActionID": "adf28340-b016-5f02-9b26-b0511831c1d8",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "chrome-daily-key-5"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "2,1": {
+          "ActionID": "5a980825-0dcf-50eb-bcc8-5ab86950e041",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "chrome-daily-key-6"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "3,1": {
+          "ActionID": "1c758153-067b-53ca-b6d5-cc6b08debb86",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "chrome-daily-key-7"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        }
+      },
+      "Type": "Keypad"
+    },
+    {
+      "Actions": {
+        "0,0": {
+          "ActionID": "1ec29552-ddf5-5261-82c8-19086253c93e",
+          "LinkedTitle": true,
+          "Name": "App control",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "dialId": "chrome-daily-3"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Image": "Images/dial-0.png",
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.control"
+        },
+        "1,0": {
+          "ActionID": "dff4200a-072a-5ce8-8d5e-1f1ca46eae82",
+          "LinkedTitle": true,
+          "Name": "App control",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "dialId": "chrome-daily-0"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Image": "Images/dial-1.png",
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.control"
+        },
+        "2,0": {
+          "ActionID": "4d0fd293-ad9c-5431-86c5-905aa4c7d259",
+          "LinkedTitle": true,
+          "Name": "App control",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "dialId": "chrome-daily-1"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Image": "Images/dial-2.png",
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.control"
+        },
+        "3,0": {
+          "ActionID": "3593b962-8862-5a9d-938d-4a807c124be1",
+          "LinkedTitle": true,
+          "Name": "App control",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "dialId": "chrome-daily-2"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Image": "Images/dial-3.png",
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.control"
+        }
+      },
+      "Type": "Encoder"
+    }
+  ],
+  "Icon": "",
+  "Name": "Chrome Daily"
+}

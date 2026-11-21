@@ -1,0 +1,7 @@
+{
+  "name": "everyday-dials-build-tools",
+  "private": true,
+  "devDependencies": {
+    "@elgato/cli": "1.10.5"
+  }
+}

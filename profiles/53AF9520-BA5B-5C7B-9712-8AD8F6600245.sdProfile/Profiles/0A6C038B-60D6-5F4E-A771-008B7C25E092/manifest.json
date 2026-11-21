@@ -1,0 +1,280 @@
+{
+  "Controllers": [
+    {
+      "Actions": {
+        "0,0": {
+          "ActionID": "1488ccbc-2573-5599-93e1-4808b2eafa57",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "youtube-controls-key-1"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "1,0": {
+          "ActionID": "96ec34e6-0dbd-5065-8b85-6203554bfd9f",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "youtube-controls-key-0"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "2,0": {
+          "ActionID": "9962f34a-45a6-514e-b70a-69dc3e60658f",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "youtube-controls-key-2"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "3,0": {
+          "ActionID": "b9c46d73-54f0-522f-8305-6635b00df620",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "youtube-controls-key-4"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "0,1": {
+          "ActionID": "811322c4-fcd0-5055-b6c9-80613b45068a",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "youtube-controls-key-5"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "1,1": {
+          "ActionID": "9f56899f-3b35-556e-bbb7-e0498bcdae7b",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "youtube-controls-key-3"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "2,1": {
+          "ActionID": "044526af-c7c2-5368-b444-38bb8efa57e0",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "youtube-controls-key-6"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "3,1": {
+          "ActionID": "b6596b39-5ec0-5ddd-8e5c-88156d2411bd",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "youtube-controls-key-7"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        }
+      },
+      "Type": "Keypad"
+    },
+    {
+      "Actions": {
+        "0,0": {
+          "ActionID": "2a9d91ff-19f4-5091-a053-601cd3105fd8",
+          "LinkedTitle": true,
+          "Name": "App control",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "dialId": "youtube-controls-2"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.control"
+        },
+        "1,0": {
+          "ActionID": "3263566a-9ec4-5744-9398-947e46ab5410",
+          "LinkedTitle": true,
+          "Name": "App control",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "dialId": "youtube-controls-0"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.control"
+        },
+        "2,0": {
+          "ActionID": "91b78e2b-5505-5d2b-906e-3c7de2efc3bd",
+          "LinkedTitle": true,
+          "Name": "App control",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "dialId": "youtube-controls-1"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.control"
+        },
+        "3,0": {
+          "ActionID": "beac1142-bd2d-57f6-a9db-0dd4d62aa3d4",
+          "LinkedTitle": true,
+          "Name": "App control",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "dialId": "youtube-controls-3"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.control"
+        }
+      },
+      "Type": "Encoder"
+    }
+  ],
+  "Icon": "",
+  "Name": "YouTube Controls"
+}

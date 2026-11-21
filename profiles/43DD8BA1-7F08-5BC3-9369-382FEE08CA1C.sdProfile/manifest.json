@@ -1,0 +1,15 @@
+{
+  "Device": {
+    "Model": "20GBD9901",
+    "UUID": "00000000-0000-0000-0000-000000000000"
+  },
+  "Name": "Everyday Dials - Stremio Cinema",
+  "Pages": {
+    "Current": "a1d46e37-06be-5dea-a27e-d5e77a742cdc",
+    "Default": "2f3afe84-395a-533f-aa81-dc697f52c61e",
+    "Pages": [
+      "a1d46e37-06be-5dea-a27e-d5e77a742cdc"
+    ]
+  },
+  "Version": "3.0"
+}

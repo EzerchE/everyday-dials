@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Chrome Daily",
+    "profile": "63d785fb-40c0-5695-afc3-1a9822f265d6",
+    "page": "a3eabe40-c2cb-5643-b681-fab26fb3a5fa",
+    "default": "62ea8d28-9154-5ea3-adcb-9086347cbfd7"
+  },
+  {
+    "name": "Stremio Cinema",
+    "profile": "43dd8ba1-7f08-5bc3-9369-382fee08ca1c",
+    "page": "a1d46e37-06be-5dea-a27e-d5e77a742cdc",
+    "default": "2f3afe84-395a-533f-aa81-dc697f52c61e"
+  },
+  {
+    "name": "Spotify Media",
+    "profile": "17ea80bc-19f1-5b67-af49-97432944970a",
+    "page": "e28b0d08-e69a-563c-a87d-0d818bfc1a0a",
+    "default": "051f31c6-0e7a-5a8b-b357-0cca62f4731a"
+  },
+  {
+    "name": "Telegram Daily",
+    "profile": "806a6b1b-d480-5bfb-abea-c0f7c4f47082",
+    "page": "f2c416f9-acbc-5ab4-902d-52a251489537",
+    "default": "ff7558c6-47ce-517b-a821-99e2de771ac1"
+  },
+  {
+    "name": "WhatsApp Daily",
+    "profile": "fb9ed280-c437-51f3-8530-632af19fbb16",
+    "page": "93e4c81b-4dd8-5468-991e-945cb66e6507",
+    "default": "714bb0b5-31aa-5ba5-9d1f-b1b6d80178e3"
+  },
+  {
+    "name": "Bambu Studio Prep",
+    "profile": "0c64bf53-8325-58a7-bcc0-97bda5d98edf",
+    "page": "65be93fa-9d2d-5d07-af9d-f36cb0ea3ad7",
+    "default": "3c43d136-b9e8-5dcd-adf9-eacba2b69e80"
+  },
+  {
+    "name": "YouTube Controls",
+    "profile": "53af9520-ba5b-5c7b-9712-8ad8f6600245",
+    "page": "0a6c038b-60d6-5f4e-a771-008b7c25e092",
+    "default": "5e198498-cf44-5eb9-95fe-31e87ded655d"
+  }
+]

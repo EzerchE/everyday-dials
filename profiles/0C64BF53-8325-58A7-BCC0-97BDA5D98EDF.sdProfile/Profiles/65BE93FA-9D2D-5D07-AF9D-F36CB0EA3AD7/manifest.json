@@ -1,0 +1,284 @@
+{
+  "Controllers": [
+    {
+      "Actions": {
+        "0,0": {
+          "ActionID": "63137a63-73c6-5eeb-a072-f04fdaa884a2",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "bambu-studio-prep-key-0"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "1,0": {
+          "ActionID": "d55d87ca-a45e-5aaf-bae9-17b96738e96a",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "bambu-studio-prep-key-1"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "2,0": {
+          "ActionID": "a8db2eff-bde7-5348-81b5-36a89b863322",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "bambu-studio-prep-key-2"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "3,0": {
+          "ActionID": "a9520fd2-75c3-53a3-b0ca-8820be6b9be4",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "bambu-studio-prep-key-3"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "0,1": {
+          "ActionID": "c35b3903-533d-54e0-9d13-ab2335605fef",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "bambu-studio-prep-key-4"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "1,1": {
+          "ActionID": "62eed5ec-7b2a-53dc-bd67-eb5ba2886ec4",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "bambu-studio-prep-key-5"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "2,1": {
+          "ActionID": "e984ea56-feb1-593e-a075-93a6d88fdfee",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "bambu-studio-prep-key-6"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "3,1": {
+          "ActionID": "e405b547-8830-58cd-befa-20d10f2a799b",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "bambu-studio-prep-key-7"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        }
+      },
+      "Type": "Keypad"
+    },
+    {
+      "Actions": {
+        "0,0": {
+          "ActionID": "012844aa-00b0-5356-b098-175e7f6e3413",
+          "LinkedTitle": true,
+          "Name": "App control",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "dialId": "bambu-studio-prep-3"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Image": "Images/dial-0.png",
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.control"
+        },
+        "1,0": {
+          "ActionID": "31effe04-4963-5608-8b19-d375b6a45ad9",
+          "LinkedTitle": true,
+          "Name": "App control",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "dialId": "bambu-studio-prep-0"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Image": "Images/dial-1.png",
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.control"
+        },
+        "2,0": {
+          "ActionID": "0b695d7a-61f9-5456-9b57-827992e179f1",
+          "LinkedTitle": true,
+          "Name": "App control",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "dialId": "bambu-studio-prep-1"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Image": "Images/dial-2.png",
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.control"
+        },
+        "3,0": {
+          "ActionID": "7acb1e7a-f65c-54be-9527-3d3e143e89c1",
+          "LinkedTitle": true,
+          "Name": "App control",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "dialId": "bambu-studio-prep-2"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Image": "Images/dial-3.png",
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.control"
+        }
+      },
+      "Type": "Encoder"
+    }
+  ],
+  "Icon": "",
+  "Name": "Bambu Studio Prep"
+}

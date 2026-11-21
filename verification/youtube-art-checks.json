@@ -1,0 +1,20 @@
+{
+  "design": "V7",
+  "originalFiles": 422,
+  "originalHashes": "pass",
+  "archivalV4Hashes": "pass",
+  "archivalV6Hashes": "pass",
+  "optionalNormalIcons": 28,
+  "optionalPressedIcons": 28,
+  "optionalNativeDialPngs": 16,
+  "assignedYouTubeKeys": 8,
+  "assignedYouTubeDials": 4,
+  "keyVariantOriginalByteEquality": "pass",
+  "runtimeDialBackgrounds": "18 native200x100 images:16 normal/left/right/press plus2 actual master-muted",
+  "singlePixmapLayout": "pass",
+  "speedPressedAdaptation": "Reset action label replaces unassigned dash; no rate claim",
+  "editorIcons": "4 transparent SVG-derived144px canvases with54px glyph bounds",
+  "windowsMasterMute": "readback; browser M remains unknown",
+  "persistentBrowserStateClaim": false,
+  "speedPercentageClaim": false
+}

@@ -1,0 +1,86 @@
+{
+  "playback-playing": {
+    "icon": "pause",
+    "label": "Pause",
+    "status": "Playing",
+    "active": true,
+    "action": "K"
+  },
+  "playback-paused": {
+    "icon": "play",
+    "label": "Play",
+    "status": "Paused",
+    "active": false,
+    "action": "K"
+  },
+  "captions-on": {
+    "icon": "captions",
+    "label": "Captions",
+    "status": "On",
+    "active": true,
+    "action": "C"
+  },
+  "captions-off": {
+    "icon": "captions",
+    "label": "Captions",
+    "status": "Off",
+    "active": false,
+    "action": "C"
+  },
+  "mute-on": {
+    "icon": "mute",
+    "label": "Unmute",
+    "status": "Muted",
+    "active": true,
+    "action": "M"
+  },
+  "mute-off": {
+    "icon": "unmute",
+    "label": "Mute",
+    "status": "Sound On",
+    "active": false,
+    "action": "M"
+  },
+  "fullscreen-on": {
+    "icon": "fullscreen",
+    "label": "Full Screen",
+    "status": "On",
+    "active": true,
+    "action": "F"
+  },
+  "fullscreen-off": {
+    "icon": "fullscreen",
+    "label": "Full Screen",
+    "status": "Off",
+    "active": false,
+    "action": "F"
+  },
+  "theater-on": {
+    "icon": "theater",
+    "label": "Theater",
+    "status": "On",
+    "active": true,
+    "action": "T"
+  },
+  "theater-off": {
+    "icon": "theater",
+    "label": "Theater",
+    "status": "Off",
+    "active": false,
+    "action": "T"
+  },
+  "mini-player-on": {
+    "icon": "mini-player",
+    "label": "Mini Player",
+    "status": "On",
+    "active": true,
+    "action": "I"
+  },
+  "mini-player-off": {
+    "icon": "mini-player",
+    "label": "Mini Player",
+    "status": "Off",
+    "active": false,
+    "action": "I"
+  }
+}

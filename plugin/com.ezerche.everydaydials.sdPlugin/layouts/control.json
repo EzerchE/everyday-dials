@@ -1,0 +1,115 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/layout.json",
+  "id": "com.ezerche.everydaydials.layout",
+  "controller": "Encoder",
+  "items": [
+    {
+      "key": "title",
+      "type": "text",
+      "rect": [
+        7,
+        2,
+        186,
+        18
+      ],
+      "font": {
+        "size": 13,
+        "weight": 700
+      },
+      "alignment": "left",
+      "color": "#FFFFFF"
+    },
+    {
+      "key": "icon",
+      "type": "pixmap",
+      "rect": [
+        8,
+        24,
+        43,
+        43
+      ]
+    },
+    {
+      "key": "value",
+      "type": "text",
+      "rect": [
+        57,
+        24,
+        136,
+        23
+      ],
+      "font": {
+        "size": 16,
+        "weight": 700
+      },
+      "alignment": "left",
+      "color": "#FFFFFF"
+    },
+    {
+      "key": "detail",
+      "type": "text",
+      "rect": [
+        57,
+        47,
+        136,
+        15
+      ],
+      "font": {
+        "size": 9,
+        "weight": 500
+      },
+      "alignment": "left",
+      "color": "#AEB8C6"
+    },
+    {
+      "key": "activity",
+      "type": "bar",
+      "rect": [
+        57,
+        65,
+        135,
+        4
+      ],
+      "range": {
+        "min": 0,
+        "max": 100
+      },
+      "value": 0,
+      "bar_bg_c": "#303948",
+      "bar_fill_c": "#FFFFFF",
+      "border_w": 0
+    },
+    {
+      "key": "directions",
+      "type": "text",
+      "rect": [
+        5,
+        72,
+        190,
+        12
+      ],
+      "font": {
+        "size": 10,
+        "weight": 500
+      },
+      "alignment": "center",
+      "color": "#C5CBD6"
+    },
+    {
+      "key": "press",
+      "type": "text",
+      "rect": [
+        5,
+        86,
+        190,
+        12
+      ],
+      "font": {
+        "size": 10,
+        "weight": 600
+      },
+      "alignment": "center",
+      "color": "#FFFFFF"
+    }
+  ]
+}

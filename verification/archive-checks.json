@@ -1,0 +1,21 @@
+{
+  "design": "V7",
+  "archiveEntryCounts": {
+    "bambu-studio-prep.streamDeckProfile": 16,
+    "chrome-daily.streamDeckProfile": 16,
+    "com.ezerche.everydaydials.streamDeckPlugin": 210,
+    "spotify-media.streamDeckProfile": 16,
+    "stremio-cinema.streamDeckProfile": 16,
+    "telegram-daily.streamDeckProfile": 16,
+    "whatsapp-daily.streamDeckProfile": 16,
+    "youtube-controls.streamDeckProfile": 16,
+    "Everyday-Dials-YouTube-Icon-Library-0.1.0-beta.1.zip": 110,
+    "Everyday-Dials-0.1.0-beta.1.zip": 42,
+    "Everyday-Dials-0.1.0-beta.1-source.zip": 1341
+  },
+  "pluginArchiveByteEquality": "pass",
+  "profileArchiveByteEquality": "pass",
+  "originalFileHashesPass": 422,
+  "publication": "authorized free public beta; upload handled separately",
+  "hardware": "full7-profile QA incomplete"
+}

@@ -1,0 +1,16 @@
+{
+  "surfaceTop": "#2D3035",
+  "surfaceBottom": "#08090B",
+  "activeTop": "#382327",
+  "activeBottom": "#100B0E",
+  "pressTop": "#4C252B",
+  "pressBottom": "#180B0F",
+  "activeForeground": "#FF777C",
+  "background": "#111315",
+  "foreground": "#F3F5F7",
+  "muted": "#B5BDC4",
+  "accent": "#FF454B",
+  "feedbackBackground": "#251619",
+  "divider": "#343A40",
+  "sheet": "#23272B"
+}

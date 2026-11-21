@@ -1,0 +1,11 @@
+{
+  "AppVersion": "7.2.1.22472",
+  "DeviceModel": "20GBD9901",
+  "DeviceSettings": null,
+  "FormatVersion": 1,
+  "OSType": "Windows",
+  "OSVersion": "10.0.19041",
+  "RequiredPlugins": [
+    "com.ezerche.everydaydials"
+  ]
+}

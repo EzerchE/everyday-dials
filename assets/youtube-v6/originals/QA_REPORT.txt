@@ -1,0 +1,9 @@
+V6 VISUAL QA
+376 PNGs decoded; key/dial dimensions validated. 35 SVG sources present.
+Every normal/pressed and persistent-state combination visually reviewed.
+All native 144px key and 200x100 dial exports reviewed in contact sheets.
+Restored gradient depth and safe frame-following glow inspected.
+No blank export or clipped/overlapping artwork text found in review.
+Playback-playing maps to Pause; playback-paused maps to Play.
+Feature-off does not mean unavailable/disabled.
+Physical hardware, plugin sync, and live browser playback NOT tested.

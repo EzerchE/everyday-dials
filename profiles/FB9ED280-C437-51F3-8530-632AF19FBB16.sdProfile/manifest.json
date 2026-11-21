@@ -1,0 +1,15 @@
+{
+  "Device": {
+    "Model": "20GBD9901",
+    "UUID": "00000000-0000-0000-0000-000000000000"
+  },
+  "Name": "Everyday Dials - WhatsApp Daily",
+  "Pages": {
+    "Current": "93e4c81b-4dd8-5468-991e-945cb66e6507",
+    "Default": "714bb0b5-31aa-5ba5-9d1f-b1b6d80178e3",
+    "Pages": [
+      "93e4c81b-4dd8-5468-991e-945cb66e6507"
+    ]
+  },
+  "Version": "3.0"
+}

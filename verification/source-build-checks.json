@@ -1,0 +1,11 @@
+{
+  "design": "V7",
+  "scope": "local public source build; no fresh isolated source-ZIP rebuild claimed",
+  "build": "SDK8.0.428; zero warnings/errors",
+  "selfTestPassLines": 350,
+  "officialCliVersion": "1.10.5",
+  "officialCliValidate": "pass",
+  "officialCliPack": "pass",
+  "sdkManagedProfileKeys": 56,
+  "liveInstalledByBuild": false
+}

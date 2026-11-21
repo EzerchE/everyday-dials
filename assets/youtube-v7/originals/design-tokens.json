@@ -1,0 +1,14 @@
+{
+  "canvas": "#0B0D10",
+  "surfaceTop": "#30343B",
+  "surfaceMid": "#191C21",
+  "surfaceBottom": "#090B0E",
+  "foreground": "#F5F7FA",
+  "muted": "#A8B0BA",
+  "faint": "#69727D",
+  "accent": "#FF5058",
+  "activeForeground": "#FF7A80",
+  "border": "#FFFFFF24",
+  "sheet": "#15181C",
+  "card": "#101317"
+}

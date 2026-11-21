@@ -1,0 +1,284 @@
+{
+  "Controllers": [
+    {
+      "Actions": {
+        "0,0": {
+          "ActionID": "88f88489-543e-5af6-bad5-6a6dc88ab154",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "spotify-media-key-1"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "1,0": {
+          "ActionID": "df870175-8853-5470-abf9-67dfa7eac529",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "spotify-media-key-0"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "2,0": {
+          "ActionID": "42e20596-904e-54d6-b4a9-9ef88e026ec2",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "spotify-media-key-2"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "3,0": {
+          "ActionID": "ea16e79e-3110-5c5f-a07b-e247f1955f6b",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "spotify-media-key-3"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "0,1": {
+          "ActionID": "5c6f1351-d05d-5673-9373-b0872f7a8560",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "spotify-media-key-7"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "1,1": {
+          "ActionID": "11259e2c-f7dd-59fa-9734-46ee9083c8fb",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "spotify-media-key-4"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "2,1": {
+          "ActionID": "675fabef-477f-50c4-8cb1-81bc724cfcd1",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "spotify-media-key-5"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "3,1": {
+          "ActionID": "d6608330-2cfa-50ab-a9e9-080aab066a27",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "spotify-media-key-queue"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        }
+      },
+      "Type": "Keypad"
+    },
+    {
+      "Actions": {
+        "0,0": {
+          "ActionID": "9673cbb2-2167-591a-b497-9a900a87951e",
+          "LinkedTitle": true,
+          "Name": "App control",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "dialId": "spotify-media-0"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Image": "Images/dial-0.png",
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.control"
+        },
+        "1,0": {
+          "ActionID": "4806a798-2550-5258-a787-a2887de33ee3",
+          "LinkedTitle": true,
+          "Name": "App control",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "dialId": "spotify-media-1"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Image": "Images/dial-1.png",
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.control"
+        },
+        "2,0": {
+          "ActionID": "df2c5e89-a91c-5531-b78b-923d06fad3da",
+          "LinkedTitle": true,
+          "Name": "App control",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "dialId": "spotify-media-2"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Image": "Images/dial-2.png",
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.control"
+        },
+        "3,0": {
+          "ActionID": "288d95ba-92d3-5d83-82a4-a6c30d6d49fe",
+          "LinkedTitle": true,
+          "Name": "App control",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "dialId": "spotify-media-3"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Image": "Images/dial-3.png",
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.control"
+        }
+      },
+      "Type": "Encoder"
+    }
+  ],
+  "Icon": "",
+  "Name": "Spotify Media"
+}

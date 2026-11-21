@@ -1,0 +1,62 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "UUID": "com.ezerche.everydaydials",
+  "Name": "Everyday Dials",
+  "Author": "ezerche",
+  "Description": "Seven Windows Stream Deck+ shortcut layouts with guarded foreground app input and Windows master volume readback.",
+  "Version": "0.1.0.0",
+  "SDKVersion": 2,
+  "CodePath": "bin/EverydayDials.exe",
+  "Icon": "images/plugin",
+  "Category": "Everyday Dials",
+  "CategoryIcon": "images/category",
+  "Software": {
+    "MinimumVersion": "6.5"
+  },
+  "OS": [
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Actions": [
+    {
+      "UUID": "com.ezerche.everydaydials.control",
+      "Name": "App control",
+      "Icon": "images/action",
+      "Controllers": [
+        "Encoder"
+      ],
+      "Encoder": {
+        "layout": "layouts/control.json",
+        "Icon": "images/action",
+        "TriggerDescription": {
+          "Rotate": "Previous / next or decrease / increase",
+          "Push": "Perform displayed action",
+          "Touch": "Perform displayed action"
+        }
+      },
+      "States": [
+        {
+          "Image": "images/plugin",
+          "ShowTitle": false
+        }
+      ]
+    },
+    {
+      "UUID": "com.ezerche.everydaydials.key",
+      "Name": "App key",
+      "Icon": "images/action",
+      "Controllers": [
+        "Keypad"
+      ],
+      "DisableAutomaticStates": true,
+      "States": [
+        {
+          "Image": "images/plugin",
+          "ShowTitle": false
+        }
+      ]
+    }
+  ]
+}

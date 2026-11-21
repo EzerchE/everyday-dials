@@ -1,0 +1,15 @@
+{
+  "Device": {
+    "Model": "20GBD9901",
+    "UUID": "00000000-0000-0000-0000-000000000000"
+  },
+  "Name": "Everyday Dials - Bambu Studio Prep",
+  "Pages": {
+    "Current": "65be93fa-9d2d-5d07-af9d-f36cb0ea3ad7",
+    "Default": "3c43d136-b9e8-5dcd-adf9-eacba2b69e80",
+    "Pages": [
+      "65be93fa-9d2d-5d07-af9d-f36cb0ea3ad7"
+    ]
+  },
+  "Version": "3.0"
+}

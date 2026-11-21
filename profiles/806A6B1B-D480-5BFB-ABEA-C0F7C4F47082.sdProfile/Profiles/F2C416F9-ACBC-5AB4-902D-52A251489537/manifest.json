@@ -1,0 +1,284 @@
+{
+  "Controllers": [
+    {
+      "Actions": {
+        "0,0": {
+          "ActionID": "80568e03-4281-58e3-b247-870aecad551e",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "telegram-daily-key-4"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "1,0": {
+          "ActionID": "8b501b2c-3511-52be-bc64-6c38ffd3874b",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "telegram-daily-key-0"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "2,0": {
+          "ActionID": "6e71f297-89c8-5c24-986d-bd6d61f39aca",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "telegram-daily-key-5"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "3,0": {
+          "ActionID": "79fe8045-2ce5-5d6d-9797-17330388eb60",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "telegram-daily-key-7"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "0,1": {
+          "ActionID": "ebb99215-f07c-5207-9932-5ba18c96d6d0",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "telegram-daily-key-1"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "1,1": {
+          "ActionID": "7579b999-79e0-5ad8-b54a-a6248ddb0c38",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "telegram-daily-key-2"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "2,1": {
+          "ActionID": "3f8afa06-fb6e-5066-a83c-bfd0fedf5065",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "telegram-daily-key-3"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        },
+        "3,1": {
+          "ActionID": "183146a6-6d15-5c53-b6c6-7779c141aa8e",
+          "LinkedTitle": true,
+          "Name": "App key",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "keyId": "telegram-daily-key-6"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.key"
+        }
+      },
+      "Type": "Keypad"
+    },
+    {
+      "Actions": {
+        "0,0": {
+          "ActionID": "7b97ed37-6e57-55a1-8a7e-852aeb84c2b8",
+          "LinkedTitle": true,
+          "Name": "App control",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "dialId": "telegram-daily-3"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Image": "Images/dial-0.png",
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.control"
+        },
+        "1,0": {
+          "ActionID": "008a1c73-d770-5794-9191-9e5144326eaa",
+          "LinkedTitle": true,
+          "Name": "App control",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "dialId": "telegram-daily-0"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Image": "Images/dial-1.png",
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.control"
+        },
+        "2,0": {
+          "ActionID": "4c5982eb-055e-5bcd-a894-97b272030849",
+          "LinkedTitle": true,
+          "Name": "App control",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "dialId": "telegram-daily-1"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Image": "Images/dial-2.png",
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.control"
+        },
+        "3,0": {
+          "ActionID": "f5022bc5-c166-501b-a230-650856079b12",
+          "LinkedTitle": true,
+          "Name": "App control",
+          "Plugin": {
+            "Name": "Everyday Dials",
+            "UUID": "com.ezerche.everydaydials",
+            "Version": "0.1.0.0"
+          },
+          "Resources": null,
+          "Settings": {
+            "dialId": "telegram-daily-2"
+          },
+          "State": 0,
+          "States": [
+            {
+              "Image": "Images/dial-3.png",
+              "Title": "",
+              "ShowTitle": false
+            }
+          ],
+          "UUID": "com.ezerche.everydaydials.control"
+        }
+      },
+      "Type": "Encoder"
+    }
+  ],
+  "Icon": "",
+  "Name": "Telegram Daily"
+}

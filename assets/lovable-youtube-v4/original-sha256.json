@@ -1,0 +1,377 @@
+[
+  {
+    "file": "icons/_preview.png",
+    "sha256": "51ae5021c35d7481a28ed6cdd4137ae276b4c0e892df2a646cb2437a97dbfbda",
+    "bytes": 1845658
+  },
+  {
+    "file": "icons/caption-size-down-pressed.png",
+    "sha256": "34c83194ee6d5c4d91ed2eb4f85f253a1e2fe5fc5345b1be4896ffad363f82ef",
+    "bytes": 39208
+  },
+  {
+    "file": "icons/caption-size-down.png",
+    "sha256": "0588773df823fec3daeb663ddd7e197cd71fc2996c372ea60b5c4fce5d2d9e14",
+    "bytes": 25086
+  },
+  {
+    "file": "icons/caption-size-up-pressed.png",
+    "sha256": "9402627d697752ed02d062dc87c92d600cb34cf0922cba41ab5a01441b5d5871",
+    "bytes": 39410
+  },
+  {
+    "file": "icons/caption-size-up.png",
+    "sha256": "521535bf778fc1e8b8790ba3437fe900464ffa9b2a0fe6545b1dc626a05e75e1",
+    "bytes": 25222
+  },
+  {
+    "file": "icons/captions-pressed.png",
+    "sha256": "f88f4d4e726705fc76fbbf72130120a5239188c1a17b5c7faa591312f489e586",
+    "bytes": 39778
+  },
+  {
+    "file": "icons/captions.png",
+    "sha256": "cb7b185f03f22d3262a558d6dd0553933ce492abf82d4696d2678bac5a2f864f",
+    "bytes": 25608
+  },
+  {
+    "file": "icons/dial-frame-left.png",
+    "sha256": "5566b079e86eecc3bf73bfa790685a568ad5d64bf49d1a4a214c9cec1dcd8389",
+    "bytes": 19227
+  },
+  {
+    "file": "icons/dial-frame-right.png",
+    "sha256": "f435224e01475c161cd5e771461dfa328041ac7fc9989599da21100c1b362be7",
+    "bytes": 19196
+  },
+  {
+    "file": "icons/dial-frame.png",
+    "sha256": "de974d7fca11f15d8c0c324f844133c05c67ff67c62be5eba709586beb87bdbb",
+    "bytes": 10265
+  },
+  {
+    "file": "icons/dial-seek-left.png",
+    "sha256": "33b133a4e447594605eaf6cd850d08782b4951cfb8cacb440bd3a8794bf70da4",
+    "bytes": 18664
+  },
+  {
+    "file": "icons/dial-seek-right.png",
+    "sha256": "40af64c5652c6db238e28fe21f25c59650a66f53cc0b4723631164d2f805ea68",
+    "bytes": 18668
+  },
+  {
+    "file": "icons/dial-seek.png",
+    "sha256": "e0bbd0c317011d35fee717e55e06efc265c4f1707d3d4d55f7a0dbdb10e4fb60",
+    "bytes": 9845
+  },
+  {
+    "file": "icons/dial-speed-left.png",
+    "sha256": "643563d8b1880defdb5e2c6216a014d79cfc6e4709bafde497831fe9d4743f88",
+    "bytes": 17526
+  },
+  {
+    "file": "icons/dial-speed-right.png",
+    "sha256": "b2a12e8726178ea7b7ffffdcc8a2f082d5d0ea6c14ac2f94204a704083a8ee49",
+    "bytes": 17542
+  },
+  {
+    "file": "icons/dial-speed.png",
+    "sha256": "bdae7e8c4ae7cee00710a8eb43f61afca1b793fb6a34b88eb025efa500360609",
+    "bytes": 8702
+  },
+  {
+    "file": "icons/dial-volume-left.png",
+    "sha256": "1b73ae548a63cac593bedac5f4de1601c2e005cb9b3e5d2b0dacaeb33be351cd",
+    "bytes": 17972
+  },
+  {
+    "file": "icons/dial-volume-right.png",
+    "sha256": "186419b41ced96238dacfdb9cccd8196e4490db160e41e44a44899180a0db0f8",
+    "bytes": 17963
+  },
+  {
+    "file": "icons/dial-volume.png",
+    "sha256": "91837faa7220e27f7ca66aa0bee725ba533cba606659982b4720bd374cd6b2f9",
+    "bytes": 9193
+  },
+  {
+    "file": "icons/forward-10-pressed.png",
+    "sha256": "fb60136b92fe713e178705a00fad62f7045642b1faf9a54b5bd0c1b04a326cae",
+    "bytes": 42120
+  },
+  {
+    "file": "icons/forward-10.png",
+    "sha256": "fec7de3a2c45e3bcce262abce44d32b1ee8c7e69446372a80b905f120a437d3a",
+    "bytes": 28001
+  },
+  {
+    "file": "icons/forward-5-pressed.png",
+    "sha256": "edec952676c074f53eedb0fa030b7744a4f044dee051c85c9b9617dc1259db4e",
+    "bytes": 41797
+  },
+  {
+    "file": "icons/forward-5.png",
+    "sha256": "158adab456f69db69182b10a38e23efaf900fd18975eecec8fae8f207d816d05",
+    "bytes": 27662
+  },
+  {
+    "file": "icons/frame-back-pressed.png",
+    "sha256": "afb0901b219defbd77e4614bf13a5215ea3332f9882b86ba807ee68bf98edbf1",
+    "bytes": 38408
+  },
+  {
+    "file": "icons/frame-back.png",
+    "sha256": "929779f849e570aeddded362504fec86a4003a877ae82b72c8fe22f128db0f17",
+    "bytes": 24614
+  },
+  {
+    "file": "icons/frame-forward-pressed.png",
+    "sha256": "ce236a841895c631dcbecf76a01bc5357bec1a2a4a7941ae5a0cb475d87253b1",
+    "bytes": 38477
+  },
+  {
+    "file": "icons/frame-forward.png",
+    "sha256": "c28184c82ea1a94dad97ffe9e300e061420a8ad6e7943d47819f864c73dc5fb6",
+    "bytes": 24735
+  },
+  {
+    "file": "icons/fullscreen-pressed.png",
+    "sha256": "08e560112aebdddbdbcd97ce4fdf45e558b9544ea8202485c7136da9c5e25676",
+    "bytes": 38779
+  },
+  {
+    "file": "icons/fullscreen.png",
+    "sha256": "2a7ecc3a7f398645bdf82f9dddaf3030cb3e3501dc0db5a6eeb50134b8d9d0d2",
+    "bytes": 24872
+  },
+  {
+    "file": "icons/jump-end-pressed.png",
+    "sha256": "c9ad2e645d7c3fc10ce03cec849d1a7187c0f82614372defacbbb797f1728021",
+    "bytes": 39583
+  },
+  {
+    "file": "icons/jump-end.png",
+    "sha256": "15fcce095b7b500540d88b66ef3debd279080a118e0ecfce80399bbfdcc162f6",
+    "bytes": 26019
+  },
+  {
+    "file": "icons/mini-player-pressed.png",
+    "sha256": "4fabb2e71bea3b9bf34d700ea846e92531f65ba06a5cea74c1ff82c1b96b96c1",
+    "bytes": 39120
+  },
+  {
+    "file": "icons/mini-player.png",
+    "sha256": "b1bf50b9eb4057c768cb5911056c179e589cfe5252123ef906b438c02196cf7b",
+    "bytes": 25172
+  },
+  {
+    "file": "icons/mute-pressed.png",
+    "sha256": "2a28ade07f17dd3f948406703ff76140c1348a299976f94f84d686b5d7431e31",
+    "bytes": 38274
+  },
+  {
+    "file": "icons/mute.png",
+    "sha256": "fc9406d15e6b663f619985693d7c5b110a0985b9e0cf3dccfb3e2127f381fb6e",
+    "bytes": 24530
+  },
+  {
+    "file": "icons/next-chapter-alt-pressed.png",
+    "sha256": "c4f08b74620ed32c78873bbf190a1a3d75eea79866ecc3466be4a0ffb2e88d05",
+    "bytes": 39782
+  },
+  {
+    "file": "icons/next-chapter-alt.png",
+    "sha256": "ac89580734b84bf49ddaf7a8b70f08b510a2e6a45304aa38001a6a026ab333a0",
+    "bytes": 26363
+  },
+  {
+    "file": "icons/next-chapter-pressed.png",
+    "sha256": "f1596705212e3cbbf914123bb2c4370b2a4e6c54e48b82b0c5674f22f6f4fee7",
+    "bytes": 38185
+  },
+  {
+    "file": "icons/next-chapter.png",
+    "sha256": "dbd2de40825a332bd0487ef980e0a51113aaa39d8bd764a4641d645b7d4994fa",
+    "bytes": 24625
+  },
+  {
+    "file": "icons/next-video-pressed.png",
+    "sha256": "1fabf1d20ea719878c40864dfa6a6d94145f0c8d63712ad2253e397923f1d33c",
+    "bytes": 39495
+  },
+  {
+    "file": "icons/next-video.png",
+    "sha256": "5f4a32a1e24d72e44b7e0071a26c3c6e68bd90217ba9d3e9dbc0a560d5220382",
+    "bytes": 26071
+  },
+  {
+    "file": "icons/play-pause-pressed.png",
+    "sha256": "3876732c14a6319d1dc0eb15932af3250a0609e776c0fb22929a67f6ca62d050",
+    "bytes": 39681
+  },
+  {
+    "file": "icons/play-pause.png",
+    "sha256": "2714c2ed3309d19a02b1e9299ec3ac192e789ffd06919779778f29d28150e10c",
+    "bytes": 25801
+  },
+  {
+    "file": "icons/prev-chapter-alt-pressed.png",
+    "sha256": "977612b6f9a798ecf2079fa9c6e06bbecd2a1fb6c8389e5c474255415c083556",
+    "bytes": 39639
+  },
+  {
+    "file": "icons/prev-chapter-alt.png",
+    "sha256": "a83b0739dfab26c6daef64ffa686212ef03f328e6d9bd80d5903121141c1f6b2",
+    "bytes": 26264
+  },
+  {
+    "file": "icons/prev-chapter-pressed.png",
+    "sha256": "0767f36437585c24007dfab7b6c37af45cb482a2367babc4f0ca1b7f1ae52132",
+    "bytes": 39501
+  },
+  {
+    "file": "icons/prev-chapter.png",
+    "sha256": "7d8a79ab27e40e38fcadb4878f06c052c17def4a0e4cb20b4fe59f2e65bdfb55",
+    "bytes": 25882
+  },
+  {
+    "file": "icons/prev-video-pressed.png",
+    "sha256": "463823d296b0be2944ca022f0a94dc85ab050d73d7388dd9d02fe438cac31128",
+    "bytes": 39320
+  },
+  {
+    "file": "icons/prev-video.png",
+    "sha256": "e829859002be6d8f16e52bc758f2c12f9a8a91fe20c239bf6818a94f6d0e180a",
+    "bytes": 25903
+  },
+  {
+    "file": "icons/restart-pressed.png",
+    "sha256": "4a868538b75bb298b0acf12d84ef0b363c68c15e01c6ae7051890f9193bef9d0",
+    "bytes": 38761
+  },
+  {
+    "file": "icons/restart.png",
+    "sha256": "287513e7c5569362f1fb5bd39a39731e5786237c4776a26dd34911a97fa971d2",
+    "bytes": 25316
+  },
+  {
+    "file": "icons/rewind-10-pressed.png",
+    "sha256": "5ba17196d9503094de32ea00d8de3053d1a065be8575dcb643b4a816fe27224a",
+    "bytes": 41480
+  },
+  {
+    "file": "icons/rewind-10.png",
+    "sha256": "f871c4dd2a1b28b8c9fd97610a914e7d94d1c807a5492dc5aa79ed8c3a6a057d",
+    "bytes": 27266
+  },
+  {
+    "file": "icons/rewind-5-pressed.png",
+    "sha256": "d2628b17f2b974e5b3f7b84dfc3eda6c8313ff8aaaeecfb74fc63778be72cfc8",
+    "bytes": 41135
+  },
+  {
+    "file": "icons/rewind-5.png",
+    "sha256": "e4cfb40e73fc25d2c2ee202f4eaf703a2951b8d8e40c7988af6ca7a719ef90a8",
+    "bytes": 26839
+  },
+  {
+    "file": "icons/search-pressed.png",
+    "sha256": "37e7c97f4a74ba4eb81e6e1192e233d69855fec158f77a60076938456c03a4b6",
+    "bytes": 39743
+  },
+  {
+    "file": "icons/search.png",
+    "sha256": "ceeac24077ce00a1a437265eb4aece3c180f6bc764728fa7048b415b56575af7",
+    "bytes": 25594
+  },
+  {
+    "file": "icons/shortcuts-pressed.png",
+    "sha256": "acf9d9669c3e34df087f70847fdefac58cef125185f157b315632d579c9a19d6",
+    "bytes": 39595
+  },
+  {
+    "file": "icons/shortcuts.png",
+    "sha256": "d57e56fe84250f58b70f22f6e1746382080d63b02c33dbb0c5ece2170149a4cd",
+    "bytes": 25621
+  },
+  {
+    "file": "icons/SHORTCUTS.txt",
+    "sha256": "ce8f5065e443a2151c4462c9d18911824e13f85caed50d773018a9d39cfa34ca",
+    "bytes": 3660
+  },
+  {
+    "file": "icons/speed-down-pressed.png",
+    "sha256": "79d4b186f3018fef8119777be89b09d23d44c71f4d8fe00af0c2a522b1ff56de",
+    "bytes": 38709
+  },
+  {
+    "file": "icons/speed-down.png",
+    "sha256": "9ad739df0f37b592813b88ce182e66fe4133b8fdaaab6308f4f95c605b83bd5e",
+    "bytes": 24499
+  },
+  {
+    "file": "icons/speed-up-pressed.png",
+    "sha256": "d0f44b3e3bada83c628195d7b890db0e124aea9578bc1f4d93938cb80e3be7b9",
+    "bytes": 38934
+  },
+  {
+    "file": "icons/speed-up.png",
+    "sha256": "ad1b3636f95a113642373a08e9802a6df30a71f8fbd15b8424564103612ac76c",
+    "bytes": 24817
+  },
+  {
+    "file": "icons/theater-pressed.png",
+    "sha256": "bd7726cb60a256c7267c1c84ed593c038267f77e5f1c2f45395113af80c3a2ed",
+    "bytes": 37676
+  },
+  {
+    "file": "icons/theater.png",
+    "sha256": "b29793747322f75d99e4d765cc61000d063f0029ffcd948dcfa95a710089967b",
+    "bytes": 23746
+  },
+  {
+    "file": "icons/volume-down-pressed.png",
+    "sha256": "790548433ae4e5fc42a1c2c1d194d37b0a86724eda6cb796ae8be960efc182f8",
+    "bytes": 38474
+  },
+  {
+    "file": "icons/volume-down.png",
+    "sha256": "0804dfc18c217a29b02cd70b29d510dd19621ae0e9944b34fcabaa48d2273d4c",
+    "bytes": 24805
+  },
+  {
+    "file": "icons/volume-up-pressed.png",
+    "sha256": "e03e396a83e622cb8456f8c7556175c6f0eaff1783c9c9477e30022fdda1cc9c",
+    "bytes": 38715
+  },
+  {
+    "file": "icons/volume-up.png",
+    "sha256": "6ff7e0370a2d430ee503847c2d3edd3bd06d8509170f5fbc7611700be0f070c7",
+    "bytes": 25070
+  },
+  {
+    "file": "marketplace/app-icon-288x288.png",
+    "sha256": "12f3c4807403601fb02cec25f97467da967d270f5d6c80ca732153e0ecc532b8",
+    "bytes": 21591
+  },
+  {
+    "file": "marketplace/gallery-1-all-keys.png",
+    "sha256": "452682af639cf5ffce0e5156623d7621335281efe7160eef0143796c1f9100eb",
+    "bytes": 139797
+  },
+  {
+    "file": "marketplace/gallery-2-pressed-states.png",
+    "sha256": "8be356524888a657611ff8b9ec23f967a780abd554298d6af930ee099f9ffe08",
+    "bytes": 107472
+  },
+  {
+    "file": "marketplace/gallery-3-dials.png",
+    "sha256": "98029c40fb3ff06d882d97d8218e2fed7ff7d0a74bdcbd3bf6ea4b5d95d5662d",
+    "bytes": 124315
+  },
+  {
+    "file": "marketplace/thumbnail-1920x960.png",
+    "sha256": "80df76d029bc4dda456a8b689a04568320ace42e0a433064f0af8ab82d3ff3a8",
+    "bytes": 118064
+  }
+]

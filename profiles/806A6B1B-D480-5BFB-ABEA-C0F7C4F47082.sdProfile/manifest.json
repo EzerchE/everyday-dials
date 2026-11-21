@@ -1,0 +1,15 @@
+{
+  "Device": {
+    "Model": "20GBD9901",
+    "UUID": "00000000-0000-0000-0000-000000000000"
+  },
+  "Name": "Everyday Dials - Telegram Daily",
+  "Pages": {
+    "Current": "f2c416f9-acbc-5ab4-902d-52a251489537",
+    "Default": "ff7558c6-47ce-517b-a821-99e2de771ac1",
+    "Pages": [
+      "f2c416f9-acbc-5ab4-902d-52a251489537"
+    ]
+  },
+  "Version": "3.0"
+}

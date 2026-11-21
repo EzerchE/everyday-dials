@@ -1,0 +1,106 @@
+{
+  "release": "v0.1.0-beta.1",
+  "status": "free public beta candidate; V7 design accepted; full seven-profile hardware QA incomplete",
+  "profiles": {
+    "Chrome Daily": {
+      "keys": 8,
+      "dials": 4,
+      "entries": 16,
+      "references": "pass",
+      "import": "unverified",
+      "hardware": "pending",
+      "pageReferenceGraph": "current, default and listed pages all resolve to contained manifests"
+    },
+    "Stremio Cinema": {
+      "keys": 8,
+      "dials": 4,
+      "entries": 16,
+      "references": "pass",
+      "import": "unverified",
+      "hardware": "pending",
+      "pageReferenceGraph": "current, default and listed pages all resolve to contained manifests"
+    },
+    "Spotify Media": {
+      "keys": 8,
+      "dials": 4,
+      "entries": 16,
+      "references": "pass",
+      "import": "unverified",
+      "hardware": "pending",
+      "pageReferenceGraph": "current, default and listed pages all resolve to contained manifests"
+    },
+    "Telegram Daily": {
+      "keys": 8,
+      "dials": 4,
+      "entries": 16,
+      "references": "pass",
+      "import": "unverified",
+      "hardware": "pending",
+      "pageReferenceGraph": "current, default and listed pages all resolve to contained manifests"
+    },
+    "WhatsApp Daily": {
+      "keys": 8,
+      "dials": 4,
+      "entries": 16,
+      "references": "pass",
+      "import": "unverified",
+      "hardware": "pending",
+      "pageReferenceGraph": "current, default and listed pages all resolve to contained manifests"
+    },
+    "Bambu Studio Prep": {
+      "keys": 8,
+      "dials": 4,
+      "entries": 16,
+      "references": "pass",
+      "import": "unverified",
+      "hardware": "pending",
+      "pageReferenceGraph": "current, default and listed pages all resolve to contained manifests"
+    },
+    "YouTube Controls": {
+      "keys": 8,
+      "dials": 4,
+      "entries": 16,
+      "references": "pass",
+      "import": "private V7 UI reviewed; public-profile device acceptance incomplete",
+      "hardware": "V7 private UI and appearance reviewed; limited speed controls physically confirmed; public beta hardware QA incomplete",
+      "pageReferenceGraph": "current, default and listed pages all resolve to contained manifests"
+    }
+  },
+  "uniqueActionIds": 84,
+  "catalogDials": 28,
+  "catalogKeys": 56,
+  "sdkManagedProfileKeys": 56,
+  "selfTestPassLines": 350,
+  "officialCliVersion": "1.10.5",
+  "officialCliValidation": "pass",
+  "officialCliPack": "pass",
+  "packagedPluginFiles": 210,
+  "dependencyHashes": "pass; unmodified NuGet net8.0 binaries",
+  "privacy": "allowlist and text/binary pattern scan pass",
+  "media": "4 exact-layout PNGs +4 current V7 PNGs at1920x960,288px app icon; all static examples",
+  "youtubeArtwork": {
+    "design": "V7",
+    "originalFiles": 422,
+    "originalHashes": "pass",
+    "archivalV4Hashes": "pass",
+    "archivalV6Hashes": "pass",
+    "optionalNormalIcons": 28,
+    "optionalPressedIcons": 28,
+    "optionalNativeDialPngs": 16,
+    "assignedYouTubeKeys": 8,
+    "assignedYouTubeDials": 4,
+    "keyVariantOriginalByteEquality": "pass",
+    "runtimeDialBackgrounds": "18 native200x100 images:16 normal/left/right/press plus2 actual master-muted",
+    "singlePixmapLayout": "pass",
+    "speedPressedAdaptation": "Reset action label replaces unassigned dash; no rate claim",
+    "editorIcons": "4 transparent SVG-derived144px canvases with54px glyph bounds",
+    "windowsMasterMute": "readback; browser M remains unknown",
+    "persistentBrowserStateClaim": false,
+    "speedPercentageClaim": false
+  },
+  "hardware": "creator confirmed retained speed reset; V7 design accepted and private UI reviewed; limited speed controls physically confirmed; full7-profile hardware QA incomplete",
+  "liveInstallation": "private V7 installation and UI review separate; public build never installs",
+  "publicationReady": true,
+  "keyImageOverrides": "absent on all56 keys; SDK-managed state enabled; full hardware QA incomplete",
+  "published": false
+}

@@ -1,0 +1,15 @@
+{
+  "Device": {
+    "Model": "20GBD9901",
+    "UUID": "00000000-0000-0000-0000-000000000000"
+  },
+  "Name": "Everyday Dials - Chrome Daily",
+  "Pages": {
+    "Current": "a3eabe40-c2cb-5643-b681-fab26fb3a5fa",
+    "Default": "62ea8d28-9154-5ea3-adcb-9086347cbfd7",
+    "Pages": [
+      "a3eabe40-c2cb-5643-b681-fab26fb3a5fa"
+    ]
+  },
+  "Version": "3.0"
+}

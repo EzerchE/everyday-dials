@@ -1,0 +1,87 @@
+VIDEO CONTROLS — V7 GELİŞTİRİCİ TESLİM NOTLARI
+============================================
+
+AMAÇ
+V7, V6 varlık adlarını ve kısayol eşlemesini korurken görünümü ve etkileşim
+geri bildirimlerini iyileştirir. Bu paket çalışan bir eklenti veya profil değil,
+görsel varlık ve uygulama referansıdır. Fiziksel Stream Deck testi yapılmadı.
+
+V7'DE NE DEĞİŞTİ?
+1. Bütün yüzeylerde aynı koyu grafit geçiş ve geniş, çok hafif üst ışık var.
+2. Normal çerçeveler yumuşatıldı; beyaz, sert dış hat kullanılmıyor.
+3. Basılı tuşlarda aynı güvenli iç çerçeve, kısa kırmızı çizgi, kontrollü iç
+   parlama ve yaklaşık %5 ikon küçülmesi bulunur. Etiket sabit kalır.
+4. Kadran çevirmede değerler artık oklarla değiştirilmiyor. Sol/sağ değer
+   korunur; yalnızca aktif yön kırmızı olur, chevron ve kısa alt çizgi belirir.
+5. Çevirme ile basma aynı değildir: çevirmede yönsel ışık, basmada tam iç
+   çerçeve ve merkezde basma komutu kullanılır.
+6. Aktif kalıcı durumlarda sıcak yüzey ve dolu durum noktası; kapalı durumda
+   nötr yüzey ve boş nokta kullanılır. Basarken kalıcı durum metni kaybolmaz.
+
+DOSYA SEÇİMİ
+- Önerilen: keys/labeled/144 ve states/labeled/144. Etiket PNG içindedir;
+  Stream Deck'in native title alanını boş bırakın / gizleyin.
+- 288 klasörleri iki kat kaynaklardır; native 144 dosyaları ayrıca üretilmiştir.
+- icon-only yalnızca uygulama kendi etiketini çizecekse kullanılmalıdır.
+  İki etiketi aynı anda göstermeyin.
+- Her encoder kendi native 200x100 görselini kullanır. 400x200 iki kat kaynaktır.
+- Görselleri bağımsız yeniden boyutlandırmayın, üzerlerine yeni ikon, glow,
+  gölge, çerçeve veya ek açıklama metni eklemeyin.
+
+OLAY BAĞLANTISI
+Tuşlar:
+- keyDown: ilgili '-pressed.png' görselini göster.
+- keyUp: en güncel doğrulanmış kalıcı durum görseline dön. Kalıcı durum yoksa
+  normal görseli kullan; bilinmiyorsa sahte bir On/Off durumu varsayma.
+
+Kadranlar:
+- dialRotate: her tick için direction > 0 ise '-right', direction < 0 ise
+  '-left' görselini göster. Son tick'ten yaklaşık 140 ms sonra normal veya
+  doğrulanmış kalıcı durum görseline dön. Hızlı ardışık tick'lerde eski timer'ı
+  iptal et; aksi halde görsel erken sıfırlanır.
+- dialDown: '-pressed' görselini göster.
+- dialUp: en güncel doğrulanmış normal/kalıcı durum görseline dön.
+- Olay adlarını kullandığınız Stream Deck SDK sürümüne göre bağlayın.
+- Speed push için doğrulanmış native reset kısayolu yoktur; '—' gösterilir ve
+  bir eylem atanmamalıdır.
+
+KALICI DURUM SENKRONİZASYONU
+- Playback, Captions, Mute, Full Screen, Theater ve Mini Player için gerçek
+  oynatıcı durumu eklenti/browser entegrasyonu tarafından okunmalıdır.
+- Playback ikonu sıradaki eylemi gösterir: Playing iken Pause, Paused iken Play.
+- Mute ikonu mevcut ses durumunu gösterir; etiket sıradaki komutu verir.
+- Kullanıcı durumu tarayıcıdan değiştirirse tuş görseli de güncellenmelidir.
+- 'Off' kalıcı özellik durumudur; unavailable/disabled anlamına gelmez.
+- Doğrulanmamış yüzde, hız veya konum değeri göstermeyin.
+
+YERLEŞİM
+- reference/01-target-layout.png hedef görünümüdür.
+- reference/06-native-touch-strip.png tam 800x100 pikseldir; dört slotun her biri
+  200x100 olarak ayrı teslim edilir. Tek bir görseli dört kadrana yaymayın.
+- Yuvarlatılmış iç çerçeveler cihaz kırpma alanından içeridedir. Ekstra dış
+  çerçeve çizmek köşelerde yeniden kırpılma ve çift hat oluşturabilir.
+
+KABUL KONTROLÜ
+[ ] 144 px native tuşlarda etiketler ve ikonlar net; native title kapalı.
+[ ] Basılı durumda köşeler kırpılmıyor; tek çerçeve ve kısa kırmızı çizgi var.
+[ ] keyUp sonrası tuş eski normal kopyaya değil gerçek son duruma dönüyor.
+[ ] 200x100 slotlarda başlık, değer ve Press ipucu okunabiliyor.
+[ ] Sol/sağ çevirmede değerler korunuyor, yalnızca ilgili yön vurgulanıyor.
+[ ] Son tick'ten sonra geri bildirim sıfırlanıyor; hızlı çevirmede titreme yok.
+[ ] Basma ve çevirme efektleri birbirinin yerine kullanılmıyor.
+[ ] Gerçek cihazda bir genel tuş, bir kalıcı durum tuşu ve bir kadran test edildi.
+
+KISAYOLLAR
+SHORTCUTS_EN.txt dosyasındaki eşlemeleri kullanın. Oyuncu odağı, playlist,
+chapter ve klavye düzeni koşullarına dikkat edin. Tiyatro, altyazı boyutu ve
+bazı uyumluluk kısayollarını yayınlamadan önce güncel YouTube oynatıcısında
+ayrıca doğrulayın.
+
+GELİŞTİRİCİYE KISA MESAJ
+V7'deki labeled/144 ve dials/200x100 dosyalarını doğrudan kullanın; eski
+PNG'leri yeniden ölçeklemeyin. Basılı durumda yalnızca '-pressed' dosyasına
+geçin, bırakınca gerçek oynatıcı durumuna dönün. Kadran çevirmede değerleri
+oklarla değiştirmeyin; '-left/right' görselleri aktif yönü zaten vurgular.
+PNG üstüne ikinci çerçeve, glow veya metin eklemeyin. Tüm profile uygulamadan
+önce gerçek cihazda bir tuş ve bir kadranla köşe, okunabilirlik ve reset
+davranışını doğrulayın.

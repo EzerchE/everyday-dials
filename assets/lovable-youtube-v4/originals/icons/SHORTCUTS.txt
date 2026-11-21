@@ -1,0 +1,60 @@
+YOUTUBE STREAM DECK PACK - v4
+=============================
+
+SETUP
+- Keys: Stream Deck > "Hotkey" action. Set State 1 = <name>.png, State 2 = <name>-pressed.png.
+- Turn off the key title (images already contain labels).
+- Dials (Stream Deck +): use a dial hotkey plugin (e.g. "Advanced Dial"/"Dial Hotkey").
+  Default screen = dial-<name>.png, while turning left = dial-<name>-left.png, right = dial-<name>-right.png
+  (only plugins that can change the touch screen image support the left/right images).
+- The YouTube tab must be focused (click the video once) for shortcuts to work.
+- macOS: use Cmd instead of Ctrl where noted.
+
+KEYS                          FILE                      SHORTCUT
+---------------------------------------------------------------------------
+Play / Pause                  play-pause                K  (or Space)
+Full Screen                   fullscreen                F
+Captions on/off               captions                  C
+Mute / Unmute                 mute                      M
+Mini Player                   mini-player               I
+Theater Mode                  theater                   T
+Previous (video)              prev-chapter              Shift + P
+Next (video)                  next-chapter              Shift + N
+Prev Chapter                  prev-chapter-alt          Ctrl + Left Arrow   (Mac: Option + Left)
+Next Chapter                  next-chapter-alt          Ctrl + Right Arrow  (Mac: Option + Right)
+Prev Video (playlist)         prev-video                Shift + P
+Next Video                    next-video                Shift + N
+Back 10s                      rewind-10                 J
+Forward 10s                   forward-10                L
+Back 5s                       rewind-5                  Left Arrow
+Forward 5s                    forward-5                 Right Arrow
+Volume +                      volume-up                 Up Arrow    (player focused)
+Volume -                      volume-down               Down Arrow  (player focused)
+Speed +                       speed-up                  Shift + .   ( > )
+Speed -                       speed-down                Shift + ,   ( < )
+Frame -1 (when paused)        frame-back                ,
+Frame +1 (when paused)        frame-forward             .
+Restart video                 restart                   Home  (or 0)
+Jump to End                   jump-end                  End
+Caption size +                caption-size-up           +  (or =)
+Caption size -                caption-size-down         -
+Search                        search                    /
+Show shortcuts                shortcuts                 Shift + /  ( ? )
+
+Note: "prev-chapter"/"next-chapter" (labels "Previous"/"Next") are the general
+versions; use the "-alt" files when you want the button to say "Prev/Next Chapter".
+Bonus: number keys 1-9 jump to 10%-90% of the video.
+
+DIALS                 FILE           TURN LEFT        TURN RIGHT        PRESS
+---------------------------------------------------------------------------
+Volume                dial-volume    Down Arrow       Up Arrow          M (mute)
+Seek 10s              dial-seek      J                L                 K (play/pause)
+Speed                 dial-speed     Shift + ,        Shift + .         (no native key - set
+                                                                         Speed -/+ until 1x)
+Frame Step            dial-frame     ,                .                 K (play/pause)
+
+FILES
+- *.png              normal state (288x288 / 400x200, 2x retina)
+- *-pressed.png      pressed state
+- dial-*-left/right  turning feedback
+- _preview.png       overview of the pack

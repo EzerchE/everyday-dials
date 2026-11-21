@@ -1,0 +1,3 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>WinExe</OutputType><TargetFramework>net8.0-windows10.0.19041.0</TargetFramework><WindowsSdkPackageVersion>10.0.19041.57</WindowsSdkPackageVersion><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable><AllowUnsafeBlocks>false</AllowUnsafeBlocks><AssemblyName>EverydayDials</AssemblyName><Version>0.1.0-beta.1</Version><AssemblyVersion>0.1.0.0</AssemblyVersion><DebugType>none</DebugType><DebugSymbols>false</DebugSymbols><Deterministic>true</Deterministic></PropertyGroup>
+</Project>

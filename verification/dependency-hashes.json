@@ -1,0 +1,26 @@
+[
+  {
+    "file": "bin/Microsoft.Windows.SDK.NET.dll",
+    "package": "Microsoft.Windows.SDK.NET.Ref",
+    "version": "10.0.19041.57",
+    "packagePath": "lib/net8.0/Microsoft.Windows.SDK.NET.dll",
+    "sha256": "0ec371d93798852e36461c8adddbeadce0f963a04752f0b64e54fe19c1c834a7",
+    "unmodified": true
+  },
+  {
+    "file": "bin/Microsoft.Windows.UI.Xaml.dll",
+    "package": "Microsoft.Windows.SDK.NET.Ref",
+    "version": "10.0.19041.57",
+    "packagePath": "lib/net8.0/Microsoft.Windows.UI.Xaml.dll",
+    "sha256": "ebde71d1a781a0c56257d303d25c7f3eee33b78e972af3359c69b5bbc8ec45ca",
+    "unmodified": true
+  },
+  {
+    "file": "bin/WinRT.Runtime.dll",
+    "package": "Microsoft.Windows.SDK.NET.Ref",
+    "version": "10.0.19041.57",
+    "packagePath": "lib/net8.0/WinRT.Runtime.dll",
+    "sha256": "bcf3a14e8712a90837fc5c0d8c8a24696af2bd7f74e9767597ec81ededfb23db",
+    "unmodified": true
+  }
+]

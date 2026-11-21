@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/layout.json",
+  "id": "MinimalVideoFeedback",
+  "items": [
+    {
+      "key": "canvas",
+      "type": "pixmap",
+      "rect": [
+        0,
+        0,
+        200,
+        100
+      ],
+      "value": "../dials/200x100/dial-volume.png"
+    }
+  ]
+}

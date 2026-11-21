@@ -1,0 +1,15 @@
+{
+  "Device": {
+    "Model": "20GBD9901",
+    "UUID": "00000000-0000-0000-0000-000000000000"
+  },
+  "Name": "Everyday Dials - YouTube Controls",
+  "Pages": {
+    "Current": "0a6c038b-60d6-5f4e-a771-008b7c25e092",
+    "Default": "5e198498-cf44-5eb9-95fe-31e87ded655d",
+    "Pages": [
+      "0a6c038b-60d6-5f4e-a771-008b7c25e092"
+    ]
+  },
+  "Version": "3.0"
+}
