@@ -1,0 +1,83 @@
+VIDEO CONTROLS — V7 / SHORTCUT MAPPING
+=============================
+
+SETUP / IMPORTANT CORRECTIONS
+- This is artwork, not an installed plugin or profile.
+- Use labeled PNGs with the native title disabled; use icon-only PNGs if
+  the application renders the label itself. Never show both labels.
+- A standard Hotkey is not a two-state press feedback action.
+- A Hotkey Switch or Multi Action Switch toggles persistently; this is not
+  momentary press feedback. Plugins must set pressed on keyDown and normal
+  on keyUp. Dial feedback also needs plugin event handling.
+- Focus the YouTube player; shortcuts may type into an active search box.
+- Do NOT globally replace Ctrl with Cmd on macOS. Chapters use Option.
+- Keyboard punctuation depends on keyboard layout; send the intended
+  character (<, >, ?, +) rather than assume a US keyboard scan code.
+
+KEYS                          FILE                      SHORTCUT
+---------------------------------------------------------------------------
+Play / Pause                  play-pause                K (Space depends on focus)
+Full Screen                   fullscreen                F
+Captions on/off               captions                  C
+Mute / Unmute                 mute                      M
+Mini Player                   mini-player               I
+Theater Mode                  theater                   T
+Previous (video)              prev-chapter              Shift + P (playlist only)
+Next (video)                  next-chapter              Shift + N
+Prev Chapter                  prev-chapter-alt          Ctrl + Left Arrow   (Mac: Option + Left)
+Next Chapter                  next-chapter-alt          Ctrl + Right Arrow  (Mac: Option + Right)
+Prev Video (playlist)         prev-video                Shift + P (playlist only)
+Next Video                    next-video                Shift + N
+Back 10s                      rewind-10                 J
+Forward 10s                   forward-10                L
+Back 5s                       rewind-5                  Left Arrow
+Forward 5s                    forward-5                 Right Arrow
+Volume +                      volume-up                 Up Arrow    (seek bar focused)
+Volume -                      volume-down               Down Arrow  (seek bar focused)
+Speed +                       speed-up                  Shift + .   ( > )
+Speed -                       speed-down                Shift + ,   ( < )
+Frame -1 (when paused)        frame-back                ,
+Frame +1 (when paused)        frame-forward             .
+Restart video                 restart                   0 (or Home with seek bar focus)
+Jump to End                   jump-end                  End (seek bar focused)
+Caption size +                caption-size-up           +  (or =)
+Caption size -                caption-size-down         -
+Search                        search                    /
+Show shortcuts                shortcuts                 Shift + /  ( ? )
+
+Note: "prev-chapter"/"next-chapter" (labels "Previous"/"Next") are the general
+versions; use the "-alt" files when you want the button to say "Prev/Next Chapter".
+Bonus: number keys 1-9 jump to 10%-90% of the video.
+
+DIALS                 FILE           TURN LEFT        TURN RIGHT        PRESS
+---------------------------------------------------------------------------
+Volume                dial-volume    Down Arrow       Up Arrow          M (mute)
+Seek 10s              dial-seek      J                L                 K (play/pause)
+Speed                 dial-speed     Shift + ,        Shift + .         Reset to 1x (plugin: press Shift+, until 0.25x, then Shift+. x3; or set playbackRate=1)
+Frame Step            dial-frame     ,                .                 K (play/pause)
+
+FILES
+- keys/              288x288 and 144x144; labeled and icon-only
+- dials/             400x200 and native 200x100
+- *-pressed.png      pressed state
+- dial-*-left/right  turning feedback
+- reference/         target layout and complete state previews
+
+SOURCES / TEST STATUS
+Official reference checked on 21 November 2026:
+https://support.google.com/youtube/answer/7631406?hl=en
+That page confirms play, mute, seeks, chapter shortcuts, frame steps,
+speed, volume, restart/end, search, fullscreen, captions and video jumps.
+It does NOT list Theater (T), caption size (+/-) or the exact '?' key
+combination. These common mappings are included as compatibility options:
+verify them against the current YouTube player and keyboard layout before
+shipping. Previous video requires a playlist; chapters require chapters.
+No physical keyboard, browser shortcut or Stream Deck hardware end-to-end
+checks were performed for this asset delivery.
+
+DIAL IMAGES
+normal = static operation description, not a fake current value.
+left/right = momentary direction feedback; values remain visible and only the active side is accented.
+Reset after the last tick; pressed = held dial press feedback.
+pressed = momentary push feedback. Speed push = reset to 1x (plugin logic).
+The full strip reference is illustrative; render each encoder separately.

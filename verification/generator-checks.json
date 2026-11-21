@@ -1,5 +1,6 @@
 {
-  "design": "V7",
+  "design": "V7.1",
+  "suppliedSourceDesign": "V8",
   "regeneratedProfiles": 7,
   "sdkManagedKeys": 56,
   "customKeyImageOverrides": 0,

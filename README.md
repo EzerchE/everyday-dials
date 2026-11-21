@@ -1,16 +1,16 @@
-# YouTube Video Controls V7 for Stream Deck+
+# YouTube Video Controls V7.1 for Stream Deck+
 
-A free YouTube control profile for Windows Stream Deck+, with eight keys, four dials, readable V7 feedback and Windows master volume on the left. Six optional bonus profiles cover Chrome, Stremio, Spotify, Telegram, WhatsApp and Bambu Studio. The included plugin and download files use the technical package name **Everyday Dials**.
+A free YouTube control profile for Windows Stream Deck+, with eight keys, four dials, readable V7.1 feedback and Windows master volume on the left. Six optional bonus profiles cover Chrome, Stremio, Spotify, Telegram, WhatsApp and Bambu Studio. The included plugin and download files use the technical package name **Everyday Dials**.
 
-![YouTube Video Controls V7 with six bonus profiles](media/thumbnail.png)
+![YouTube Video Controls V7.1 with six bonus profiles](media/thumbnail.png)
 
-**v0.1.0-beta.1 — free public beta with V7 YouTube artwork.** This is an unsigned community plugin, independently distributed through [GitHub Releases](https://github.com/EzerchE/everyday-dials/releases), with no Elgato Marketplace approval. The V7 appearance is creator-approved and the private YouTube installation was reviewed in the Stream Deck UI. YouTube speed decrease, increase and reset have received limited physical checks. All seven profiles and every shortcut have not completed hardware QA. AI assisted implementation, documentation and artwork composition.
+**v0.1.1-beta.1 — free public beta with V7.1 YouTube artwork.** This is an unsigned community plugin, independently distributed through [GitHub Releases](https://github.com/EzerchE/everyday-dials/releases), with no Elgato Marketplace approval. The V7.1 artwork removes the thin upper highlight and adds the supplied Press: 1x reset-action hint. Earlier controls received private UI review; this artwork update has no new hardware-test claim. YouTube speed decrease, increase and reset have received limited physical checks. All seven profiles and every shortcut have not completed hardware QA. AI assisted implementation, documentation and artwork composition.
 
 ## Install
 
-1. Use a **Stream Deck+**, Windows 10 version 2004 (build 19041) or newer, and Stream Deck software 6.5 or newer. This binary is for Windows x64. The named desktop apps must be installed separately.
+1. Use a **Stream Deck+**, Windows 11 x64 (tested), and Stream Deck software **7.1.0 or newer for profile import**. The plugin itself has a 6.5 minimum and targets Windows 10 build 19041 or newer; Windows 10 was not separately hardware tested. The named desktop apps must be installed separately.
 2. Install the [Microsoft .NET 8 x64 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) for Windows if it is missing. The plugin is framework dependent and requires `Microsoft.NETCore.App` 8.x; it does not bundle the .NET runtime. `dotnet --list-runtimes` can check this.
-3. Download `Everyday-Dials-0.1.0-beta.1.zip` from [the release page](https://github.com/EzerchE/everyday-dials/releases/tag/v0.1.0-beta.1), extract it, and compare `SHA256SUMS.txt` if desired. Open `com.ezerche.everydaydials.streamDeckPlugin` to install the unsigned community plugin through Stream Deck. Review any operating system or Stream Deck prompt.
+3. Download `Everyday-Dials-0.1.1-beta.1.zip` from [the release page](https://github.com/EzerchE/everyday-dials/releases/tag/v0.1.1-beta.1), extract it, and compare `SHA256SUMS.txt` if desired. Open `com.ezerche.everydaydials.streamDeckPlugin` to install the unsigned community plugin through Stream Deck. Review any operating system or Stream Deck prompt.
 4. Open the `.streamDeckProfile` files you want and choose your Stream Deck+ as the target when prompted. They use new profile IDs and only the `com.ezerche.everydaydials` plugin. No third-party plugin is included.
 5. Select a profile in Stream Deck and bring the corresponding app to the foreground. In YouTube, click the video/player, leave text fields, and then use its controls. Chapter buttons require chapters in that video. Start with quiet volume and a noncritical app view.
 
@@ -20,7 +20,7 @@ No account, payment, unlock or donation is required to use these files. If you w
 
 See the complete [key and dial guide](KEY-DIAL-GUIDE.md). Each gallery is a static rendering of shipped assets. YouTube uses neutral browser state; generic app examples show illustrative Windows volume.
 
-The YouTube profile uses creator-supplied **V7** normal/pressed keys and one native 200 × 100 PNG per dial canvas. Its minimal strip has no layered titles, tiny status prose, bars or percentage. Direction feedback lasts about 140 ms after the last turn. Keys return to neutral immediately on release, and dial press feedback stays visible while held. Speed push/tap retains the creator-confirmed 1× reset; “Reset” describes the action, never a measured rate. See the [YouTube artwork guide](YOUTUBE-ARTWORK.md).
+The YouTube profile uses creator-supplied **V7.1** normal/pressed keys and one native 200 × 100 PNG per dial canvas. Its minimal strip has no layered titles, tiny status prose, bars or percentage. Direction feedback lasts about 140 ms after the last turn. Keys return to neutral immediately on release, and dial press feedback stays visible while held. Speed push/tap retains the creator-confirmed 1× reset; “Press: 1x” labels the reset action, never a measured rate. See the [YouTube artwork guide](YOUTUBE-ARTWORK.md).
 
 ![Browser and video](media/gallery-01-browser-video.png)
 ![Music and movies](media/gallery-02-music-movies.png)
@@ -28,10 +28,10 @@ The YouTube profile uses creator-supplied **V7** normal/pressed keys and one nat
 
 ### Optional YouTube icon library
 
-The bundle includes `Everyday-Dials-YouTube-Icon-Library-0.1.0-beta.1.zip`: the V7 library's 28 labeled normal/pressed key pairs, 16 native dial PNGs and clean SVG symbols. The profile assigns eight keys and four dials; the remaining icons are customization assets. Current previews below use the actual V7 packaged layout and disclose their static examples. V4 source assets/marketing remain archival and are not current setup instructions.
+The bundle includes `Everyday-Dials-YouTube-Icon-Library-0.1.1-beta.1.zip`: the V7.1 library's 28 labeled normal/pressed key pairs, 16 native dial PNGs and clean SVG symbols. The profile assigns eight keys and four dials; the remaining icons are customization assets. Current previews below use the actual V7.1 packaged layout and disclose their static examples. V4 source assets/marketing remain archival and are not current setup instructions.
 
-![YouTube V7 layout](media/youtube-library/thumbnail-1920x960.png)
-![V7 momentary feedback examples](media/youtube-library/gallery-2-pressed-feedback.png)
+![YouTube V7.1 layout](media/youtube-library/thumbnail-1920x960.png)
+![V7.1 momentary feedback examples](media/youtube-library/gallery-2-pressed-feedback.png)
 
 The leftmost dial changes actual **Windows master output** volume by 2 percentage points per detent; push or tap toggles mute. Only verified Windows master mute selects a muted canvas. The YouTube M key remains neutral because browser mute is unknown. Captions and player modes also remain neutral; no browser integration, connection or permission has been added. Other app volume dials retain their existing percentage/mute readback. Turning a dial while held cancels its release action.
 
@@ -52,7 +52,7 @@ The Chrome YouTube key opens the fixed `https://www.youtube.com/` address in Chr
 
 Source targets .NET SDK 8.0.428 (latest installed patch allowed by `global.json`) and Windows SDK projection package 10.0.19041.57. On Windows x64, run `dotnet restore src/EverydayDials.csproj`, install the pinned local CLI with `npm.cmd ci --prefix tools`, then run `pwsh -File scripts/build.ps1`. The script builds, runs isolated fake-desktop self-tests, validates and packs with official Elgato CLI 1.10.5. It never links, installs or restarts a live plugin. Initial restore/npm install require internet access. The normal build uses the checked-in neutral artwork and sanitized profile source.
 
-To regenerate images and profile containers, install Python 3 with Pillow and ImageMagick 7, then run `python scripts/build_assets.py` before building. `python scripts/make_media.py` creates the exact-layout galleries; `python scripts/prepare_youtube_library.py` renders current V7 galleries while retaining all originals. `python scripts/render_youtube.py` renders the actual single-pixmap SDK canvas as static examples. `python scripts/verify_release.py` checks profile structure, references, dependency hashes and privacy before generating distribution ZIPs. Build artifacts are under `artifacts/`; private caches, intermediate output and debug symbols are excluded from distribution.
+To regenerate images and profile containers, install Python 3 with Pillow and ImageMagick 7, then run `python scripts/build_assets.py` before building. `python scripts/make_media.py` creates the exact-layout galleries; `python scripts/prepare_youtube_library.py` renders current V7.1 galleries while retaining all originals. `python scripts/render_youtube.py` renders the actual single-pixmap SDK canvas as static examples. `python scripts/verify_release.py` checks profile structure, references, dependency hashes and privacy before generating distribution ZIPs. Build artifacts are under `artifacts/`; private caches, intermediate output and debug symbols are excluded from distribution.
 
 ## Privacy, rights and feedback
 

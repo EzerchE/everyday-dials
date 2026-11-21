@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 NS='com.ezerche.everydaydials'
 PLUGIN=ROOT/'build'/(NS+'.sdPlugin')
 BASE=ROOT/'plugin'/(NS+'.sdPlugin')
-VERSION='0.1.0-beta.1'
+VERSION='0.1.1-beta.1'
 PUBLIC_VERIFICATION={'archive-checks.json','dependency-hashes.json','generator-checks.json','identity-map.json','release-checks.json','source-build-checks.json','visual-qa.md','youtube-art-checks.json','youtube-runtime-preview.png','youtube-shortcut-audit.json'}
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(p,s):p.write_text(s,encoding='utf-8')
@@ -60,17 +60,19 @@ def main():
  guide(identities,catalog,keys)
  from youtube_art import KEYS,FIELDS,validate_layout
  for p in (BASE/'layouts').glob('*.json'):validate_layout(read(p))
- original=ROOT/'assets/youtube-v7/originals';provenance=read(ROOT/'assets/youtube-v7/original-sha256.json')
+ original=ROOT/'assets/youtube-v8/originals';provenance=read(ROOT/'assets/youtube-v8/original-sha256.json')
  assert len(provenance)==422
  for row in provenance:assert sha(original/row['file'])==row['sha256']
- # Retained V6 and V4 files are archival source, never current selected artwork.
+ # Retained V7, V6 and V4 files are archival source, never selected artwork.
+ for row in read(ROOT/'assets/youtube-v7/original-sha256.json'):
+  assert sha(ROOT/'assets/youtube-v7/originals'/row['file'])==row['sha256']
  for row in read(ROOT/'assets/youtube-v6/original-sha256.json'):
   assert sha(ROOT/'assets/youtube-v6/originals'/row['file'])==row['sha256']
  for row in read(ROOT/'assets/lovable-youtube-v4/original-sha256.json'):
   assert sha(ROOT/'assets/lovable-youtube-v4/originals'/row['file'])==row['sha256']
  normals=[p for p in (original/'keys/labeled/144').glob('*.png') if not p.stem.endswith('-pressed')]
  dials=list((original/'dials/200x100').glob('*.png'));assert len(normals)==28 and len(dials)==16
- expectedHashes=read(BASE/'youtube-v7-key-sha256.json')
+ expectedHashes=read(BASE/'youtube-v71-key-sha256.json')
  for spec in keys.values():
   if spec['Id'].startswith('youtube-controls-key-'):
    stem=KEYS[int(spec['Id'].rsplit('-',1)[1])]
@@ -82,17 +84,14 @@ def main():
  layout=read(BASE/'layouts/youtube.json');assert layout['items']==[{'key':'canvas','type':'pixmap','rect':[0,0,200,100]}]
  for p in (BASE/'images/youtube-dials').glob('*.png'):
   assert Image.open(p).size==(200,100)
-  if p.name=='dial-speed-pressed.png':
-   assert p.read_bytes()!=(original/'dials/200x100'/p.name).read_bytes()
-  else:
-   source=original/('dials/states/200x100' if '-muted' in p.stem else 'dials/200x100')/p.name
-   assert p.read_bytes()==source.read_bytes()
+  source=original/('dials/states/200x100' if '-muted' in p.stem else 'dials/200x100')/p.name
+  assert p.read_bytes()==source.read_bytes(),'Every native canvas, including speed1x, must equal supplied V8 bytes'
  assert len(list((BASE/'images/youtube-dials').glob('*.png')))==18
  for p in (BASE/'images/youtube-encoders').glob('*.png'):
   image=Image.open(p);assert image.size==(144,144) and image.mode=='RGBA' and image.getpixel((0,0))[3]==0
   alpha=image.getchannel('A').getbbox();assert alpha and alpha[2]-alpha[0]<=54 and alpha[3]-alpha[1]<=54
  assert len(list((BASE/'images/youtube-encoders').glob('*.png')))==4
- artchecks={'design':'V7','originalFiles':len(provenance),'originalHashes':'pass','archivalV4Hashes':'pass','archivalV6Hashes':'pass','optionalNormalIcons':28,'optionalPressedIcons':28,'optionalNativeDialPngs':16,'assignedYouTubeKeys':8,'assignedYouTubeDials':4,'keyVariantOriginalByteEquality':'pass','runtimeDialBackgrounds':'18 native200x100 images:16 normal/left/right/press plus2 actual master-muted','singlePixmapLayout':'pass','speedPressedAdaptation':'Reset action label replaces unassigned dash; no rate claim','editorIcons':'4 transparent SVG-derived144px canvases with54px glyph bounds','windowsMasterMute':'readback; browser M remains unknown','persistentBrowserStateClaim':False,'speedPercentageClaim':False}
+ artchecks={'design':'V7.1','suppliedSourceDesign':'V8','originalFiles':len(provenance),'originalHashes':'pass','archivalV4Hashes':'pass','archivalV6Hashes':'pass','archivalV7Hashes':'pass','optionalNormalIcons':28,'optionalPressedIcons':28,'optionalNativeDialPngs':16,'assignedYouTubeKeys':8,'assignedYouTubeDials':4,'keyVariantOriginalByteEquality':'pass','runtimeDialBackgrounds':'18 native200x100 images:16 normal/left/right/press plus2 actual master-muted','singlePixmapLayout':'pass','speedPressedAdaptation':'none; supplied Press1x/pressed1x copied exactly; action label only','editorIcons':'4 transparent SVG-derived144px canvases with54px glyph bounds','windowsMasterMute':'readback; browser M remains unknown','persistentBrowserStateClaim':False,'speedPercentageClaim':False}
  dump(ROOT/'verification/youtube-art-checks.json',artchecks)
  manifest=read(PLUGIN/'manifest.json');assert manifest['UUID']==NS
  assert {s['UUID'] for s in manifest['Actions']}=={NS+'.key',NS+'.control'}
@@ -135,7 +134,7 @@ def main():
      if kind=='Encoder' and position=='0,0':assert spec['Volume'] and spec['Press']=='MUTE'
    for n in names:
     if n!='package.json':assert z.read(n)==(ROOT/'profiles'/n.removeprefix('Profiles/')).read_bytes()
-   assert len(names)==16;profilecounts[item['name']]={'keys':8,'dials':4,'entries':len(names),'references':'pass','import':'private V7 UI reviewed; public-profile device acceptance incomplete' if item['name']=='YouTube Controls' else 'unverified','hardware':'V7 private UI and appearance reviewed; limited speed controls physically confirmed; public beta hardware QA incomplete' if item['name']=='YouTube Controls' else 'pending','pageReferenceGraph':'current, default and listed pages all resolve to contained manifests'}
+   assert len(names)==16;profilecounts[item['name']]={'keys':8,'dials':4,'entries':len(names),'references':'pass','import':'V7.1 not installed by build; device acceptance pending' if item['name']=='YouTube Controls' else 'unverified','hardware':'V7.1 appearance/device review pending; retained speed sequence previously confirmed; full profile QA incomplete' if item['name']=='YouTube Controls' else 'pending','pageReferenceGraph':'current, default and listed pages all resolve to contained manifests'}
  assert dynamicKeys==56,'All seven profiles must allow SDK-managed key images'
  # Every catalog image and pressed variant must exist and be a real PNG.
  for s in keys.values():
@@ -177,11 +176,11 @@ def main():
    if p.is_file() and not {'bin','obj','__pycache__'}.intersection(p.relative_to(ROOT/directory).parts) and p.suffix not in ('.pyc','.pdb') and p.name not in ('phase2_preservation.py','original-build.txt'):source.append(p)
  # This scanner itself contains test patterns, so do not treat its literal regex as data.
  privacy([p for p in source if p.name!='verify_release.py'],'source');privacy([p for p in PLUGIN.rglob('*') if p.is_file()],'plugin')
- summary={'release':'v'+VERSION,'status':'free public beta candidate; V7 design accepted; full seven-profile hardware QA incomplete','profiles':profilecounts,'uniqueActionIds':len(allids),'catalogDials':28,'catalogKeys':56,'sdkManagedProfileKeys':dynamicKeys,'selfTestPassLines':len(tests),'officialCliVersion':'1.10.5','officialCliValidation':'pass','officialCliPack':'pass','packagedPluginFiles':len(expected),'dependencyHashes':'pass; unmodified NuGet net8.0 binaries','privacy':'allowlist and text/binary pattern scan pass','media':'4 exact-layout PNGs +4 current V7 PNGs at1920x960,288px app icon; all static examples','youtubeArtwork':artchecks,'hardware':'creator confirmed retained speed reset; V7 design accepted and private UI reviewed; limited speed controls physically confirmed; full7-profile hardware QA incomplete','liveInstallation':'private V7 installation and UI review separate; public build never installs','publicationReady':True,'keyImageOverrides':'absent on all56 keys; SDK-managed state enabled; full hardware QA incomplete','published':False}
+ summary={'release':'v'+VERSION,'status':'free public beta candidate; V7.1 candidate; device/appearance acceptance pending; full seven-profile hardware QA incomplete','profiles':profilecounts,'uniqueActionIds':len(allids),'catalogDials':28,'catalogKeys':56,'sdkManagedProfileKeys':dynamicKeys,'selfTestPassLines':len(tests),'officialCliVersion':'1.10.5','officialCliValidation':'pass','officialCliPack':'pass','packagedPluginFiles':len(expected),'dependencyHashes':'pass; unmodified NuGet net8.0 binaries','privacy':'allowlist and text/binary pattern scan pass','media':'4 exact-layout PNGs +4 current V7.1 PNGs at1920x960,288px app icon; all static examples','youtubeArtwork':artchecks,'hardware':'retained speed sequence previously physically confirmed; prior V7 private UI reviewed; V7.1 appearance/device review pending; full7-profile hardware QA incomplete','liveInstallation':'prior V7 private UI review separate; V7.1 build never installs','publicationReady':True,'keyImageOverrides':'absent on all56 keys; SDK-managed state enabled; full hardware QA incomplete','published':False}
  dump(ROOT/'verification/release-checks.json',summary)
  write(ROOT/'verification/final-review-checks.txt',json.dumps(summary,indent=2)+'\n')
- dump(ROOT/'verification/source-build-checks.json',{'design':'V7','scope':'local public source build; no fresh isolated source-ZIP rebuild claimed','build':'SDK8.0.428; zero warnings/errors','selfTestPassLines':len(tests),'officialCliVersion':'1.10.5','officialCliValidate':'pass','officialCliPack':'pass','sdkManagedProfileKeys':dynamicKeys,'liveInstalledByBuild':False})
- dump(ROOT/'verification/generator-checks.json',{'design':'V7','regeneratedProfiles':7,'sdkManagedKeys':dynamicKeys,'customKeyImageOverrides':0,'bindingsIdsOrderAndSourceArtwork':'unchanged','native144OriginalKeyPairs':8,'native200x100DialCanvases':18})
+ dump(ROOT/'verification/source-build-checks.json',{'design':'V7.1','suppliedSourceDesign':'V8','scope':'local public source build; no fresh isolated source-ZIP rebuild claimed','build':'SDK8.0.428; zero warnings/errors','selfTestPassLines':len(tests),'officialCliVersion':'1.10.5','officialCliValidate':'pass','officialCliPack':'pass','sdkManagedProfileKeys':dynamicKeys,'liveInstalledByBuild':False})
+ dump(ROOT/'verification/generator-checks.json',{'design':'V7.1','suppliedSourceDesign':'V8','regeneratedProfiles':7,'sdkManagedKeys':dynamicKeys,'customKeyImageOverrides':0,'bindingsIdsOrderAndSourceArtwork':'unchanged','native144OriginalKeyPairs':8,'native200x100DialCanvases':18})
  if ROOT/'verification/release-checks.json' not in source:source.append(ROOT/'verification/release-checks.json')
  docs=['README.md','KEY-DIAL-GUIDE.md','YOUTUBE-ARTWORK.md','LICENSE','PRIVACY.md','THIRD-PARTY-NOTICES.md','RELEASE-NOTES.md']
  downloads=[p for p in (ROOT/'artifacts').iterdir() if p.suffix in ('.streamDeckProfile','.streamDeckPlugin')]
@@ -192,7 +191,7 @@ def main():
   library.append((p,'keys/'+p.name));library.append((p.with_stem(p.stem+'-pressed'),'keys/'+p.stem+'-pressed.png'))
  for p in sorted(dials):library.append((p,'dials/200x100/'+p.name))
  for p in sorted((original/'vectors').glob('*.svg')):library.append((p,'vectors/'+p.name))
- library += [(ROOT/'YOUTUBE-ARTWORK.md','YOUTUBE-ARTWORK.md'),(ROOT/'THIRD-PARTY-NOTICES.md','THIRD-PARTY-NOTICES.md'),(ROOT/'assets/youtube-v7/original-sha256.json','original-sha256.json')]
+ library += [(ROOT/'YOUTUBE-ARTWORK.md','YOUTUBE-ARTWORK.md'),(ROOT/'THIRD-PARTY-NOTICES.md','THIRD-PARTY-NOTICES.md'),(ROOT/'assets/youtube-v8/original-sha256.json','original-sha256.json')]
  libraryzip=ROOT/'artifacts'/('Everyday-Dials-YouTube-Icon-Library-'+VERSION+'.zip');zipfiles(libraryzip,library)
  entries.append((libraryzip,libraryzip.name))
  # Checksums within the install bundle cover its installers; the outer file also covers both ZIPs.
@@ -203,10 +202,10 @@ def main():
  archivecounts[libraryzip.name]=len(library)
  archivecounts['Everyday-Dials-'+VERSION+'.zip']=len(entries)
  archivecounts['Everyday-Dials-'+VERSION+'-source.zip']=len(set(source))
- dump(ROOT/'verification/archive-checks.json',{'design':'V7','archiveEntryCounts':archivecounts,'pluginArchiveByteEquality':'pass','profileArchiveByteEquality':'pass','originalFileHashesPass':422,'publication':'authorized free public beta; upload handled separately','hardware':'full7-profile QA incomplete'})
+ dump(ROOT/'verification/archive-checks.json',{'design':'V7.1','suppliedSourceDesign':'V8','archiveEntryCounts':archivecounts,'pluginArchiveByteEquality':'pass','profileArchiveByteEquality':'pass','originalFileHashesPass':422,'publication':'authorized free public beta; upload handled separately','hardware':'full7-profile QA incomplete'})
  zipfiles(ROOT/'artifacts'/('Everyday-Dials-'+VERSION+'.zip'),entries)
  zipfiles(ROOT/'artifacts'/('Everyday-Dials-'+VERSION+'-source.zip'),[(p,'everyday-dials/'+p.relative_to(ROOT).as_posix()) for p in set(source)])
- public=[p for p in (ROOT/'artifacts').iterdir() if p.suffix in ('.streamDeckProfile','.streamDeckPlugin','.zip')]
+ public=[p for p in (ROOT/'artifacts').iterdir() if p.suffix in ('.streamDeckProfile','.streamDeckPlugin') or (p.suffix=='.zip' and VERSION in p.name)]
  write(ROOT/'artifacts/SHA256SUMS.txt',''.join(f'{sha(p)}  {p.name}\n' for p in sorted(public)))
  print(json.dumps(summary,indent=2))
 if __name__=='__main__':main()

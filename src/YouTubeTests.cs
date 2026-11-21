@@ -16,17 +16,17 @@ static class YouTubeTests
         void Check(bool value,string label){if(!value)throw new Exception(label);Console.WriteLine("PASS "+label);}
         string root=Path.GetFullPath(Path.Combine(AppContext.BaseDirectory,".."));
         var youtube=definitions.Where(YouTubeFeedback.IsYouTube).ToArray();
-        Check(youtube.Length==4,"exact four YouTube definitions use V7 canvas");
+        Check(youtube.Length==4,"exact four YouTube definitions use V7.1 canvas");
         foreach(var s in definitions)Check(YouTubeFeedback.Layout(s)==(s.Id.StartsWith("youtube-controls-")?"layouts/youtube.json":"layouts/control.json"),"layout selection "+s.Id);
         var layout=JsonDocument.Parse(File.ReadAllText(Path.Combine(root,"layouts/youtube.json"))).RootElement;
         var items=layout.GetProperty("items").EnumerateArray().ToArray();
-        Check(items.Length==1&&items[0].GetProperty("key").GetString()=="canvas"&&items[0].GetProperty("type").GetString()=="pixmap"&&items[0].GetProperty("rect").EnumerateArray().Select(n=>n.GetInt32()).SequenceEqual(new[]{0,0,200,100}),"V7 exactly one 200x100 pixmap eliminates text/bar and overlap layers");
+        Check(items.Length==1&&items[0].GetProperty("key").GetString()=="canvas"&&items[0].GetProperty("type").GetString()=="pixmap"&&items[0].GetProperty("rect").EnumerateArray().Select(n=>n.GetInt32()).SequenceEqual(new[]{0,0,200,100}),"V7.1 exactly one 200x100 pixmap eliminates text/bar and overlap layers");
         foreach(var spec in youtube)
         {
             foreach(int direction in new[]{-1,0,1})foreach(bool pressed in new[]{false,true})
             {
                 var bytes=File.ReadAllBytes(Path.Combine(root,YouTubeFeedback.Background(spec,direction,pressed)));
-                Check(BinaryPrimitives.ReadInt32BigEndian(bytes.AsSpan(16,4))==200&&BinaryPrimitives.ReadInt32BigEndian(bytes.AsSpan(20,4))==100,"native V7 canvas PNG dimensions "+spec.Id+":"+direction+":"+pressed);
+                Check(BinaryPrimitives.ReadInt32BigEndian(bytes.AsSpan(16,4))==200&&BinaryPrimitives.ReadInt32BigEndian(bytes.AsSpan(20,4))==100,"native V7.1 canvas PNG dimensions "+spec.Id+":"+direction+":"+pressed);
             }
         }
         DateTime clock=new(2026,11,21,0,0,0,DateTimeKind.Utc);var desktop=new FakeDesktop();List<JsonElement> output=[];
@@ -36,7 +36,7 @@ static class YouTubeTests
         int Images()=>output.Count(o=>o.GetProperty("event").GetString()=="setImage");
         await Event("willAppear",new{settings=new{dialId="youtube-controls-2"}});
         Check(Background().EndsWith("dial-volume.png"),"Windows volume starts neutral with no fabricated percentage");
-        int unchanged=output.Count;await engine.Tick();Check(output.Count==unchanged&&Images()==1,"V7 canvas and editor image cache avoid unchanged SDK sends");
+        int unchanged=output.Count;await engine.Tick();Check(output.Count==unchanged&&Images()==1,"V7.1 canvas and editor image cache avoid unchanged SDK sends");
         await Event("dialRotate",new{ticks=2});Check(desktop.State.Percent==46&&Background().EndsWith("-right.png"),"global master volume remains two percent per detent");
         clock=clock.AddMilliseconds(100);await Event("dialRotate",new{ticks=-1});
         clock=clock.AddMilliseconds(100);await engine.Tick(youtubeOnly:true);Check(Background().EndsWith("-left.png"),"direction deadline is renewed by last tick");
@@ -65,12 +65,12 @@ static class YouTubeTests
         Check(Background("speed").EndsWith("dial-speed.png"),"blocked YouTube turn still expires to neutral after 140ms");
         await Event("dialDown",new{},"speed");Check(Background("speed").EndsWith("dial-speed-pressed.png"),"blocked YouTube press still shows held feedback before dispatch");
         await Event("dialUp",new{},"speed");Check(desktop.Sent.Count==blockedCount&&Background("speed").EndsWith("dial-speed.png"),"blocked YouTube release restores neutral without injecting shortcut");
-        Check(output.Where(o=>o.GetProperty("event").GetString()=="setFeedback").All(o=>o.GetProperty("payload").EnumerateObject().Count()==1),"YouTube feedback contains only the V7 canvas, no overlay text or fake values");
+        Check(output.Where(o=>o.GetProperty("event").GetString()=="setFeedback").All(o=>o.GetProperty("payload").EnumerateObject().Count()==1),"YouTube feedback contains only the V7.1 canvas, no overlay text or fake values");
         List<JsonElement> unknown=[];var unknownEngine=new Engine(youtube,new UnavailableAudio(),o=>{unknown.Add(JsonSerializer.SerializeToElement(o));return Task.CompletedTask;});
         await unknownEngine.Handle(JsonSerializer.SerializeToElement(new{@event="willAppear",action=Engine.Uuid,context="unknown",payload=new{settings=new{dialId="youtube-controls-2"}}}));
         Check(unknown.Last().GetProperty("payload").GetProperty("canvas").GetString()!.EndsWith("dial-volume.png"),"unavailable Windows endpoint shows neutral volume artwork");
         var keys=JsonSerializer.Deserialize<List<KeySpec>>(File.ReadAllText(Path.Combine(root,"key-catalog.json")))!;
-        var hashes=JsonSerializer.Deserialize<Dictionary<string,string>>(File.ReadAllText(Path.Combine(root,"youtube-v7-key-sha256.json")))!;
+        var hashes=JsonSerializer.Deserialize<Dictionary<string,string>>(File.ReadAllText(Path.Combine(root,"youtube-v71-key-sha256.json")))!;
         var media=new FakeMedia();List<JsonElement> keyOutput=[];
         var keyEngine=new KeyEngine(keys,desktop,media,o=>{keyOutput.Add(JsonSerializer.SerializeToElement(o));return Task.CompletedTask;},clock:()=>clock);
         foreach(var s in keys.Where(s=>s.Id.StartsWith("youtube-controls-key-")))

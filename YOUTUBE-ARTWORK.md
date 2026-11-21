@@ -1,6 +1,6 @@
-# YouTube V7 artwork and Windows shortcut guide
+# YouTube V7.1 artwork and Windows shortcut guide
 
-The supplied V7 library includes **28 labeled key icons with normal/pressed pairs (56 PNGs)** and **16 native 200×100 dial PNGs** in normal/left/right/pressed sets. The optional library also includes the clean SVG symbols. The included profile assigns eight keys and four dials. Other app profiles keep their existing artwork, catalogs, layout and timing.
+The supplied V7.1 library includes **28 labeled key icons with normal/pressed pairs (56 PNGs)** and **16 native 200×100 dial PNGs** in normal/left/right/pressed sets. The optional library also includes the clean SVG symbols. The included profile assigns eight keys and four dials. Other app profiles keep their existing artwork, catalogs, layout and timing.
 
 ## Included profile
 
@@ -10,7 +10,7 @@ Dials, left to right: **Windows master output volume** (2 percentage points per 
 
 ## Feedback
 
-Each YouTube encoder has exactly one `[0,0,200,100]` pixmap using the supplied native V7 PNGs. No layered title, tiny prose, bar, percentage or rate claim is added. Runtime image changes are cached. The speed-pressed PNG has one documented adaptation: the supplied dash is replaced with **Reset**, an action label. All other normal/left/right/pressed dial PNGs are selected byte for byte.
+Each YouTube encoder has exactly one `[0,0,200,100]` pixmap using the supplied native V7.1 PNGs. No layered title, tiny prose, bar, percentage or rate claim is added. Runtime image changes are cached. All normal/left/right/pressed and actual-master-muted dial PNGs are selected byte for byte from the supplied V8 archive, displayed as V7.1. The supplied **Press: 1x** and pressed **1x** label the existing bounded reset action; they are not current-rate readback. The old Reset repaint is removed.
 
 Physical turn direction returns neutral about 140 ms after the last tick, per visible context, even when a foreground guard blocks dispatch. This visual acknowledgement does not imply the player accepted a command. Production wakes at 20 ms for pending YouTube expiry; idle audio/media and all generic feedback keep the 750 ms polling cadence. Dial-down shows pressed feedback while held; release dispatches once. Turning while held cancels the release action. Touch tap sends one command and briefly shows pressed art.
 
@@ -45,6 +45,6 @@ The generic `prev-chapter`/`next-chapter` filenames are ambiguous; their supplie
 
 ## Files and provenance
 
-`assets/youtube-v7/originals/` preserves all 422 supplied files byte for byte, including reference PNGs, SVGs, notes and source, with `original-sha256.json`. All 420 V6 originals remain archived with their hashes. Supplied code is not executed and supplied notes are reference data; they do not authorize new actions, permissions or guessed state. `verification/youtube-art-checks.json` compares assigned key bytes to these originals and validates native canvas dimensions. `youtube-v7-key-sha256.json` supplies staged self-test byte expectations.
+`assets/youtube-v8/originals/` preserves all 422 supplied files byte for byte, including reference PNGs, SVGs, notes and source, with `original-sha256.json`. The supplied source is named V8; this release displays V7.1. All 422 V7 and 420 V6 originals remain archived with their hashes. Supplied code is not executed and supplied notes are reference data; they do not authorize new actions, permissions or guessed state. `verification/youtube-art-checks.json` compares assigned key bytes to these originals and validates native canvas dimensions. `youtube-v71-key-sha256.json` supplies staged self-test byte expectations.
 
-`assets/lovable-youtube-v4/` remains archival source only. Its dense strip/marketing, uncorrected instructions and state claims are not current installation guidance. Current `media/youtube-library/` contains honest 1920×960 static V7 examples, not Marketplace-approved assets or hardware screenshots. AI assisted implementation, documentation and image composition; the supplied archive contains no separate third-party license. See the third-party notices.
+`assets/lovable-youtube-v4/` remains archival source only. Its dense strip/marketing, uncorrected instructions and state claims are not current installation guidance. Current `media/youtube-library/` contains honest 1920×960 static V7.1 examples, not Marketplace-approved assets or hardware screenshots. AI assisted implementation, documentation and image composition; the supplied archive contains no separate third-party license. See the third-party notices.

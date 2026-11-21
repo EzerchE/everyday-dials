@@ -1,6 +1,6 @@
 {
-  "release": "v0.1.0-beta.1",
-  "status": "free public beta candidate; V7 design accepted; full seven-profile hardware QA incomplete",
+  "release": "v0.1.1-beta.1",
+  "status": "free public beta candidate; V7.1 candidate; device/appearance acceptance pending; full seven-profile hardware QA incomplete",
   "profiles": {
     "Chrome Daily": {
       "keys": 8,
@@ -61,8 +61,8 @@
       "dials": 4,
       "entries": 16,
       "references": "pass",
-      "import": "private V7 UI reviewed; public-profile device acceptance incomplete",
-      "hardware": "V7 private UI and appearance reviewed; limited speed controls physically confirmed; public beta hardware QA incomplete",
+      "import": "V7.1 not installed by build; device acceptance pending",
+      "hardware": "V7.1 appearance/device review pending; retained speed sequence previously confirmed; full profile QA incomplete",
       "pageReferenceGraph": "current, default and listed pages all resolve to contained manifests"
     }
   },
@@ -74,16 +74,18 @@
   "officialCliVersion": "1.10.5",
   "officialCliValidation": "pass",
   "officialCliPack": "pass",
-  "packagedPluginFiles": 210,
+  "packagedPluginFiles": 211,
   "dependencyHashes": "pass; unmodified NuGet net8.0 binaries",
   "privacy": "allowlist and text/binary pattern scan pass",
-  "media": "4 exact-layout PNGs +4 current V7 PNGs at1920x960,288px app icon; all static examples",
+  "media": "4 exact-layout PNGs +4 current V7.1 PNGs at1920x960,288px app icon; all static examples",
   "youtubeArtwork": {
-    "design": "V7",
+    "design": "V7.1",
+    "suppliedSourceDesign": "V8",
     "originalFiles": 422,
     "originalHashes": "pass",
     "archivalV4Hashes": "pass",
     "archivalV6Hashes": "pass",
+    "archivalV7Hashes": "pass",
     "optionalNormalIcons": 28,
     "optionalPressedIcons": 28,
     "optionalNativeDialPngs": 16,
@@ -92,14 +94,14 @@
     "keyVariantOriginalByteEquality": "pass",
     "runtimeDialBackgrounds": "18 native200x100 images:16 normal/left/right/press plus2 actual master-muted",
     "singlePixmapLayout": "pass",
-    "speedPressedAdaptation": "Reset action label replaces unassigned dash; no rate claim",
+    "speedPressedAdaptation": "none; supplied Press1x/pressed1x copied exactly; action label only",
     "editorIcons": "4 transparent SVG-derived144px canvases with54px glyph bounds",
     "windowsMasterMute": "readback; browser M remains unknown",
     "persistentBrowserStateClaim": false,
     "speedPercentageClaim": false
   },
-  "hardware": "creator confirmed retained speed reset; V7 design accepted and private UI reviewed; limited speed controls physically confirmed; full7-profile hardware QA incomplete",
-  "liveInstallation": "private V7 installation and UI review separate; public build never installs",
+  "hardware": "retained speed sequence previously physically confirmed; prior V7 private UI reviewed; V7.1 appearance/device review pending; full7-profile hardware QA incomplete",
+  "liveInstallation": "prior V7 private UI review separate; V7.1 build never installs",
   "publicationReady": true,
   "keyImageOverrides": "absent on all56 keys; SDK-managed state enabled; full hardware QA incomplete",
   "published": false

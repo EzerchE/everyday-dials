@@ -1,7 +1,7 @@
-# V7 public beta visual QA
+# V7.1 visual verification
 
-Inspected the current English thumbnail, browser/video gallery and packaged V7 native key/dial review. Captions and footers fit, the V7 artwork badge is visible, and the views use the unchanged public profile order. All galleries disclose static examples; generic volume is illustrative and YouTube browser state is neutral.
+Inspected native 144px normal/pressed keys and native 200x100 normal/left/right/pressed dial canvases from the supplied V8 archive, presented as V7.1. The thin upper highlight is removed. Speed normal/direction artwork includes Press: 1x and pressed artwork includes 1x; these identify the existing bounded reset action, never current-rate readback. Every selected native PNG, including muted variants, equals its supplied bytes. No Reset repaint, frame, glow or runtime overlay is added.
 
-All 56 profile keys now allow SDK-managed artwork; the 48 non-YouTube profile image overrides were removed. Generator regeneration preserved every runtime source file, catalog, artwork image, action ID, binding and position. The profile verifier checks absence of the image override and hidden native titles for every key, plus available normal/pressed/media/mute catalog assets.
+Fresh English hero, galleries and app icon use the current V7.1 assets. Native and enlarged private previews and a GIF retain the user's actual key order. These are static/generated asset examples, not hardware screenshots or new device validation. Full seven-profile hardware QA remains incomplete.
 
-The V7 appearance is creator-approved and the private YouTube installation was reviewed in Stream Deck. These generated images are not hardware screenshots. Limited YouTube speed controls have physical confirmation; full seven-profile hardware QA remains incomplete. The free beta documents those limits, manual profile selection and optional support.
+All 56 public keys retain SDK-managed state images. Runtime-critical code, bindings, IDs, order, generic layout and non-YouTube artwork remain unchanged; only public action Plugin.Version metadata moves to 0.1.1.0. Profile import requires Stream Deck 7.1.0 or later; the plugin's 6.5 minimum is separate. Windows 11 is the previously tested OS; Windows 10 is a technical runtime target without separate hardware validation.

@@ -1,4 +1,4 @@
-"""Render packaged V7 images at native pixels; all captions are outside assets."""
+"""Render packaged V7.1 images at native pixels; all captions are outside assets."""
 from pathlib import Path
 import json,os
 from PIL import Image,ImageDraw,ImageFont
@@ -10,7 +10,7 @@ def tile(plugin,spec,direction=0,volume=42,active=False,muted=False,pressed=Fals
     suffix='-pressed' if pressed else '-left' if direction<0 else '-right' if direction>0 else ''
     state='-muted' if kind=='volume' and muted and (pressed or not direction) else ''
     return Image.open(Path(plugin)/('images/youtube-dials/dial-'+kind+state+suffix+'.png')).convert('RGB')
-def preview(plugin,out,title='YouTube V7 — native controls',keyorder=None):
+def preview(plugin,out,title='YouTube V7.1 — native controls',keyorder=None):
     plugin=Path(plugin);catalog={s['Id']:s for s in json.loads((plugin/'catalog.json').read_text())};keys={s['Id']:s for s in json.loads((plugin/'key-catalog.json').read_text())}
     im=Image.new('RGB',(1920,960),'#0D1015');d=ImageDraw.Draw(im)
     def text(x,y,s,size=24,color='#F1F1F3',bold=False):d.text((x,y),s,font=ImageFont.truetype(str(BOLD if bold else FONT),size),fill=color)
@@ -25,7 +25,7 @@ def preview(plugin,out,title='YouTube V7 — native controls',keyorder=None):
     text(1430,164,'Release restores neutral.',22)
     text(1430,205,'Direction lasts ~140 ms',22)
     text(1430,238,'after the last tick.',22)
-    text(1430,295,'Reset labels an action.',22)
+    text(1430,295,'1x labels a reset action.',22)
     text(1430,336,'Only Windows master mute',20,'#A3ADB8')
     text(1430,367,'has verified state readback.',20,'#A3ADB8')
     text(55,487,'NORMAL STRIP • four independent 200 × 100 canvases',18,'#A3ADB8')
@@ -43,5 +43,5 @@ def preview(plugin,out,title='YouTube V7 — native controls',keyorder=None):
     out=Path(out);out.parent.mkdir(parents=True,exist_ok=True);im.save(out)
 def main():
     preview(ROOT/'plugin/com.ezerche.everydaydials.sdPlugin',ROOT/'media/youtube-library/thumbnail-1920x960.png')
-    print('Rendered V7 native keys and canvases in retained private order; static examples disclosed.')
+    print('Rendered V7.1 native keys and canvases in retained private order; static examples disclosed.')
 if __name__=='__main__':main()

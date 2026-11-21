@@ -1,7 +1,7 @@
-"""Select V7 native assets for the YouTube-only canvas; no supplied code executes."""
+"""Select V7.1 native assets from supplied V8 data; no supplied code executes."""
 from pathlib import Path
-import json,shutil,subprocess,tempfile,os,hashlib
-from PIL import Image,ImageDraw,ImageFont
+import json,shutil,subprocess,tempfile,hashlib
+from PIL import Image
 KEYS={1:'prev-chapter-alt',0:'play-pause',2:'next-chapter-alt',4:'mute',5:'captions',3:'fullscreen',6:'mini-player',7:'theater'}
 DIALS={2:'volume',0:'seek',1:'speed',3:'frame'}
 FIELDS=['Image','PlayImage','PauseImage','UnknownImage','MutedImage','UnmutedImage']
@@ -27,18 +27,6 @@ def encoder_icon(originals,stem):
         subprocess.run([magick,'-background','none','-density','576',str(source),'-resize','54x54',str(dest)],check=True,capture_output=True)
         glyph=Image.open(dest).convert('RGBA');im=Image.new('RGBA',(144,144),(0,0,0,0));im.alpha_composite(glyph,((144-glyph.width)//2,(144-glyph.height)//2));return im
 
-def reset_action(source,target):
-    # V7's supplied speed press is a dash (unassigned). The creator explicitly
-    # retained reset. Replace only that dash; retain its native red underline,
-    # inner frame, surface and title. This labels an action, never a rate.
-    im=Image.open(source).convert('RGBA');d=ImageDraw.Draw(im)
-    for y in range(44,61):
-        a=im.getpixel((82,y));b=im.getpixel((118,y))
-        for x in range(83,118):
-            t=(x-82)/36;im.putpixel((x,y),tuple(round(a[c]*(1-t)+b[c]*t) for c in range(4)))
-    font=ImageFont.truetype(str(Path(os.environ.get('WINDIR',r'C:\Windows'))/'Fonts/segoeui.ttf'),16)
-    d.text((100,51),'Reset',font=font,anchor='mm',fill='#F3F5F7');im.save(target)
-
 def apply(plugin,originals):
     plugin=Path(plugin);originals=Path(originals);copied=[]
     specs=json.loads((plugin/'key-catalog.json').read_text())
@@ -62,8 +50,9 @@ def apply(plugin,originals):
         for state in ['','-left','-right','-pressed']:
             source=originals/'dials/200x100'/('dial-'+stem+state+'.png');target=folder/source.name
             assert Image.open(source).size==(200,100)
-            if stem=='speed' and state=='-pressed':reset_action(source,target)
-            else:shutil.copyfile(source,target)
+            # Supplied 1x is the existing bounded reset action, never readback.
+            # All current native images are copied byte for byte, with no paint.
+            shutil.copyfile(source,target)
             copied.append(target.relative_to(plugin).as_posix())
         target=encoders/('dial-'+stem+'.png');encoder_icon(originals,stem).save(target);copied.append(target.relative_to(plugin).as_posix())
         # Catalog/profile editor uses this same clean semantic symbol.
@@ -72,7 +61,7 @@ def apply(plugin,originals):
     for state in ['', '-pressed']:
         source=originals/'dials/states/200x100'/('dial-volume-muted'+state+'.png');shutil.copyfile(source,folder/source.name);copied.append((folder/source.name).relative_to(plugin).as_posix())
     hashes={path:hashlib.sha256((plugin/path).read_bytes()).hexdigest() for path in copied if path.startswith('images/keys/')}
-    (plugin/'youtube-v7-key-sha256.json').write_text(json.dumps(hashes,indent=2)+'\n')
+    (plugin/'youtube-v71-key-sha256.json').write_text(json.dumps(hashes,indent=2)+'\n')
     namespace=json.loads((plugin/'manifest.json').read_text())['UUID']
     layout={'$schema':'https://schemas.elgato.com/streamdeck/plugins/layout.json','id':namespace+'.youtube','controller':'Encoder','items':[{'key':'canvas','type':'pixmap','rect':[0,0,200,100]}]}
     validate_layout(layout);(plugin/'layouts/youtube.json').write_text(json.dumps(layout,indent=2)+'\n');copied.append('layouts/youtube.json')

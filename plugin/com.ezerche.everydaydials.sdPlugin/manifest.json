@@ -4,7 +4,7 @@
   "Name": "Everyday Dials",
   "Author": "ezerche",
   "Description": "Seven Windows Stream Deck+ shortcut layouts with guarded foreground app input and Windows master volume readback.",
-  "Version": "0.1.0.0",
+  "Version": "0.1.1.0",
   "SDKVersion": 2,
   "CodePath": "bin/EverydayDials.exe",
   "Icon": "images/plugin",

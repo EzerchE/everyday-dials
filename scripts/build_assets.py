@@ -68,12 +68,12 @@ def generate():
  for label,size in [('plugin',256),('action',20),('category',28)]:
   for scale,suffix in [(1,''),(2,'@2x')]:
    im=Image.new('RGBA',(size*scale,size*scale),(0,0,0,0));d=ImageDraw.Draw(im);s=size*scale;d.ellipse((s*.12,s*.12,s*.88,s*.88),outline='#90D5F3',width=max(2,round(s*.075)));d.line((s*.5,s*.5,s*.72,s*.28),fill='#FFFFFF',width=max(2,round(s*.075)));im.save(PLUGIN/f'images/{label}{suffix}.png')
- manifest={'$schema':'https://schemas.elgato.com/streamdeck/plugins/manifest.json','UUID':NAMESPACE,'Name':'Everyday Dials','Author':'ezerche','Description':'Seven Windows Stream Deck+ shortcut layouts with guarded foreground app input and Windows master volume readback.','Version':'0.1.0.0','SDKVersion':2,'CodePath':'bin/EverydayDials.exe','Icon':'images/plugin','Category':'Everyday Dials','CategoryIcon':'images/category','Software':{'MinimumVersion':'6.5'},'OS':[{'Platform':'windows','MinimumVersion':'10'}],'Actions':[
+ manifest={'$schema':'https://schemas.elgato.com/streamdeck/plugins/manifest.json','UUID':NAMESPACE,'Name':'Everyday Dials','Author':'ezerche','Description':'Seven Windows Stream Deck+ shortcut layouts with guarded foreground app input and Windows master volume readback.','Version':'0.1.1.0','SDKVersion':2,'CodePath':'bin/EverydayDials.exe','Icon':'images/plugin','Category':'Everyday Dials','CategoryIcon':'images/category','Software':{'MinimumVersion':'6.5'},'OS':[{'Platform':'windows','MinimumVersion':'10'}],'Actions':[
  {'UUID':NAMESPACE+'.control','Name':'App control','Icon':'images/action','Controllers':['Encoder'],'Encoder':{'layout':'layouts/control.json','Icon':'images/action','TriggerDescription':{'Rotate':'Previous / next or decrease / increase','Push':'Perform displayed action','Touch':'Perform displayed action'}},'States':[{'Image':'images/plugin','ShowTitle':False}]},
  {'UUID':NAMESPACE+'.key','Name':'App key','Icon':'images/action','Controllers':['Keypad'],'DisableAutomaticStates':True,'States':[{'Image':'images/plugin','ShowTitle':False}]}]}
  dump(PLUGIN/'manifest.json',manifest)
  from youtube_art import apply
- apply(PLUGIN,ROOT/'assets/youtube-v7/originals')
+ apply(PLUGIN,ROOT/'assets/youtube-v8/originals')
  for f in (ROOT/'licenses').glob('*'):shutil.copy2(f,PLUGIN/'licenses'/f.name)
  for name,p in PROFILES.items():
   pid=uid('profile/'+name).upper();pageid=uid('page/'+name);default=uid('default/'+name);base=ROOT/'profiles'/(pid+'.sdProfile');page=base/'Profiles'/pageid.upper()
@@ -81,7 +81,7 @@ def generate():
   dump(base/'manifest.json',{'Device':{'Model':'20GBD9901','UUID':'00000000-0000-0000-0000-000000000000'},'Name':'Everyday Dials - '+name,'Pages':{'Current':pageid,'Default':default,'Pages':[pageid]},'Version':'3.0'})
   dump(base/'Profiles'/default.upper()/'manifest.json',{'Controllers':[{'Actions':None,'Type':'Keypad'},{'Actions':None,'Type':'Encoder'}],'Icon':'','Name':''})
   ka={};da={}
-  def action(kind,setting,image,identity):return {'ActionID':uid(identity),'LinkedTitle':True,'Name':'App key' if kind=='key' else 'App control','Plugin':{'Name':'Everyday Dials','UUID':NAMESPACE,'Version':'0.1.0.0'},'Resources':None,'Settings':setting,'State':0,'States':[{'Image':image,'Title':'','ShowTitle':False}],'UUID':NAMESPACE+'.'+kind}
+  def action(kind,setting,image,identity):return {'ActionID':uid(identity),'LinkedTitle':True,'Name':'App key' if kind=='key' else 'App control','Plugin':{'Name':'Everyday Dials','UUID':NAMESPACE,'Version':'0.1.1.0'},'Resources':None,'Settings':setting,'State':0,'States':[{'Image':image,'Title':'','ShowTitle':False}],'UUID':NAMESPACE+'.'+kind}
   for i in range(8):
    keyid=slug(name)+'-key-'+str(KEY_ORIGINAL_INDEX[name][i]);spec=next(s for s in keys if s['Id']==keyid);image=f'Images/key-{i}.png';(page/'Images').mkdir(parents=True,exist_ok=True);shutil.copy2(PLUGIN/spec['Image'],page/image);ka[f'{i%4},{i//4}']=action('key',{'keyId':keyid},image,name+'/key/'+str(KEY_ORIGINAL_INDEX[name][i]))
    # Profile-level images override SDK setImage. Let the plugin manage every

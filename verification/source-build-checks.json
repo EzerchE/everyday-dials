@@ -1,5 +1,6 @@
 {
-  "design": "V7",
+  "design": "V7.1",
+  "suppliedSourceDesign": "V8",
   "scope": "local public source build; no fresh isolated source-ZIP rebuild claimed",
   "build": "SDK8.0.428; zero warnings/errors",
   "selfTestPassLines": 350,

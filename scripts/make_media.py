@@ -77,7 +77,7 @@ def header(im,kicker,title,subtitle):
  d=ImageDraw.Draw(im);text(d,(62,30),kicker,16,ACCENT,b=True);text(d,(58,57),title,52,b=True);text(d,(62,126),subtitle,22,MUTED)
 def footer(im):
  d=ImageDraw.Draw(im);d.line((62,906,1858,906),fill='#2C3C52',width=1)
- text(d,(62,923),'EVERYDAY DIALS  /  v0.1.0-beta.1  /  V7 YOUTUBE ART',15,b=True)
+ text(d,(62,923),'EVERYDAY DIALS  /  v0.1.1-beta.1  /  V7.1 YOUTUBE ART',15,b=True)
  text(d,(1858,923),'Static layout previews • generic volume example 42% • YouTube neutral • not live screenshots',15,MUTED,anchor='ra')
 def gallery(filename,title,subtitle,names):
  im=background();header(im,'WINDOWS  /  STREAM DECK+',title,subtitle)
@@ -89,7 +89,7 @@ def gallery(filename,title,subtitle,names):
  footer(im);im.save(ROOT/'media'/filename)
 def main():
  (ROOT/'media').mkdir(exist_ok=True)
- im=background();header(im,'FREE COMMUNITY PROFILE  /  WINDOWS STREAM DECK+','YouTube Video Controls V7','Native keys. Four tactile dials. Six bonus profiles for everyday apps.')
+ im=background();header(im,'FREE COMMUNITY PROFILE  /  WINDOWS STREAM DECK+','YouTube Video Controls V7.1','Native keys. Four tactile dials. Six bonus profiles for everyday apps.')
  paste(im,device('YouTube Controls'),65,174,820)
  d=ImageDraw.Draw(im)
  text(d,(1000,205),'LESS HUNTING.',43,b=True);text(d,(1000,260),'MORE DOING.',43,ACCENT,b=True)

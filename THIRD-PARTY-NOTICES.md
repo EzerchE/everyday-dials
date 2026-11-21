@@ -2,7 +2,7 @@
 
 The root MIT license covers the original Everyday Dials code, profile configuration and original neutral artwork composition. It does not relicense third-party files, app trademarks, Microsoft software or the .NET runtime.
 
-The creator supplied the current YouTube V7 PNGs/SVGs for this free release. All original bytes and provenance hashes are retained in `assets/youtube-v7/`; the supplied archive contains no separate upstream license. This notice does not assert a new upstream license or trademark permission for those assets. Runtime keys and native dial canvases use the supplied PNGs; only the speed-pressed dash is adapted to the confirmed “Reset” action label. Transparent encoder symbols are rendered from supplied SVGs. V4 assets in `assets/lovable-youtube-v4/` are archival source only and are not current marketing or setup instructions. Current galleries are labeled static V7 examples.
+The creator supplied the current YouTube V7.1 PNGs/SVGs for this free release. All original bytes and provenance hashes are retained in `assets/youtube-v8/`; the supplied archive contains no separate upstream license. This notice does not assert a new upstream license or trademark permission for those assets. Runtime keys and native dial canvases use the supplied PNGs; all selected native key/dial bytes, including the supplied 1x labels, are used unchanged. Transparent encoder symbols are rendered from supplied SVGs. V4 assets in `assets/lovable-youtube-v4/` are archival source only and are not current marketing or setup instructions. Current galleries are labeled static V7.1 examples.
 
 | Component | Shipped use | License / evidence |
 | --- | --- | --- |
